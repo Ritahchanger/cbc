@@ -1,0 +1,41 @@
+.ulList{
+    padding:1rem 2.3rem;
+    cursor: pointer;
+    position:relative;
+}
+.ulList::before{
+    content:"";
+    position:absolute;
+    width:0%;
+    transition:all 0.5s;
+    height:3px;
+    bottom:0;
+    left:0;
+    background:var(--dark-blue);
+}
+.ulList:hover::before{
+    width:100%;
+}
+.ulList a{
+    font-size:1.9rem;
+}
+.logos{
+    font-size:2.5rem;
+    font-weight:700;
+    text-transform: lowercase;
+    letter-spacing:2px;
+    color:var(--dark-blue);
+}
+.logos span{
+color:#7FFFD4;
+}
+.nav{
+    box-shadow:0 0 5px rgb(0,0,0,0.25);
+    position:fixed;
+    width:100%;
+    z-index:1;
+    background:#fff;
+    right:0;
+    left:0;
+    
+}
