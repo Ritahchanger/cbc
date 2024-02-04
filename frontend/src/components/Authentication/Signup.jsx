@@ -46,8 +46,10 @@ const Signup = () => {
           </div>
           <div className="input_group">
             <select name="level" id="">
-                <option value="junior secondary">Junior secondary</option>
-                <option value="senior secondary">Senior secondary</option>
+                <option value="senior secondary">Junior secondary</option>
+                <option value="Junior secondary">Senior secondary</option>
+                <option value="primary school">Junior secondary</option>
+                <option value="pre-primary school">Senior secondary</option>
             </select>
           </div>
           <div className="name_col flex">
