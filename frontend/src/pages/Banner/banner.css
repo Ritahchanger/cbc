@@ -1,8 +1,8 @@
 /* section-a */
-
 .section-a .description{
     font-size:4rem;
     text-align: start;
+    margin-top:10rem;
 }
 .container .flex{
     text-align:start;

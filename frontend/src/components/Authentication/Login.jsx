@@ -13,46 +13,64 @@ const Login = () => {
     password: "",
   });
 
-  const handleInputChange=(e)=>{
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = { ...errors };
 
-    const {name,value}=e.target;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (formData.email.trim() === "") {
+      newErrors.email = "Email is required";
+      isValid = false;
+    } else if (!formData.email.match(emailRegex)) {
+      newErrors.email = "Invalid Email format";
+      isValid = false;
+    } else {
+      newErrors.email = "";
+    }
+    const pattern_password = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/;
 
-    setFormData({
-      ...formData,
-      [name]:value,
-    });
+    if (formData.password.length === 0) {
+      newErrors.password = "Password is required";
+      isValid = false;
+    } else if (formData.password.length < 8) {
+      newErrors.password = "Your password is not strong";
+      isValid = false;
+    } else if (formData.password.match(pattern_password)) {
+      newErrors.password = "Your password should be more than 8 digits";
+      isValid = false;
+    } else {
+      newErrors.password = "";
+    }
 
-    setErrors({
-      ...errors,
-      [name]:"",
-    });
+    setErrors(newErrors);
 
+    return isValid;
   };
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
-  const handleSubmit=(e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    const newErrors={};
-
-    if(!formData.email){
-      newErrors.email="Email is required";
+    if (validateForm()) {
+      console.log("Form Data", formData);
     }
-    if(!formData.password){
-      newErrors.password="Password is required";
-    }
-    if(Object.keys(newErrors).length > 0){
-      setErrors(newErrors);
-      return;
-    }
-    console.log("Form submitted: ",formData);
-
   };
 
   return (
     <div className="authentication">
       <div className="container">
-        <form action="" className="authentication_form" id="Login_form" onSubmit={handleSubmit}>
+        <form
+          action=""
+          className="authentication_form"
+          id="Login_form"
+          onSubmit={handleSubmit}
+        >
           <a href="#" className="form_title">
             LOGIN
           </a>
@@ -65,8 +83,10 @@ const Login = () => {
               value={formData.email}
               onChange={handleInputChange}
             />
+            {errors.email && (
+              <span className="error_message">{errors.email}</span>
+            )}
           </div>
-          <span className="error_message">{errors.email}</span>
           <div className="input_group">
             <input
               type="text"
@@ -76,8 +96,10 @@ const Login = () => {
               value={formData.password}
               onChange={handleInputChange}
             />
+            {errors.password && (
+              <span className="error_message">{errors.password}</span>
+            )}
           </div>
-          <span className="error_message">{errors.password}</span>
           <input type="submit" value="LOGIN" />
           <p className="login_handler">
             <br />
