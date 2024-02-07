@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./auth.css";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +12,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-
+  const history = useHistory();
   const validateForm = () => {
     let isValid = true;
     const newErrors = { ...errors };
@@ -33,10 +33,11 @@ const Login = () => {
       newErrors.password = "Password is required";
       isValid = false;
     } else if (formData.password.length < 8) {
-      newErrors.password = "Your password is not strong";
+      newErrors.password = "Your password should be at least 8 characters long";
       isValid = false;
-    } else if (formData.password.match(pattern_password)) {
-      newErrors.password = "Your password should be more than 8 digits";
+    } else if (!formData.password.match(pattern_password)) {
+      newErrors.password =
+        "Your password should contain at least one lowercase letter, one uppercase letter, and one digit";
       isValid = false;
     } else {
       newErrors.password = "";
@@ -59,6 +60,7 @@ const Login = () => {
     e.preventDefault();
     if (validateForm()) {
       console.log("Form Data", formData);
+      history.push("/home");
     }
   };
 

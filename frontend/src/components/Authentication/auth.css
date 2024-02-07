@@ -65,12 +65,4 @@
 #level:-moz-placeholder {
   color: #999;
 }
-.error_message{
-  color:var(--color-error);
-  font-weight:600;
-  font-size:1.3rem;
-  position:absolute;
-  bottom:0;
-  left:0;
-}
 

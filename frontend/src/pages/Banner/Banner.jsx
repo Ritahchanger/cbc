@@ -7,7 +7,7 @@ import Navbar from "../../components/Navbar/Navbar";
 const Banner = () => {
   return (
     <div className="banner">
-      <Navbar />
+     <Navbar />
 
       <section className="section-a" id="section">
         <div className="container flex">

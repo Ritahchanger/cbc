@@ -54,7 +54,26 @@ a{
   text-align: center;
 }
 .sub_header{
-  text-align: start;
   FONT-SIZE:4rem;
   margin:2rem 0rem;
+}
+
+@media(max-width:760px){
+  html{
+    font-size:55.5%;
+  }
+}
+@media(max-width:650px){
+  .banner .section-a .flex{
+    flex-direction: column;
+    text-align:center;
+  }
+  html{
+    font-size:50.5%;
+  }
+}
+@media(max-width:400px){
+  html{
+    font-size:40%;
+  }
 }
