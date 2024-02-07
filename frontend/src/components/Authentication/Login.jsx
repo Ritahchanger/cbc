@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./auth.css";
-import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, useHistory } from "react-router-dom";
+import { login } from "../../reduxx/userSlice";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +15,8 @@ const Login = () => {
     password: "",
   });
   const history = useHistory();
+  const dispatch = useDispatch();
+
   const validateForm = () => {
     let isValid = true;
     const newErrors = { ...errors };
@@ -60,6 +64,13 @@ const Login = () => {
     e.preventDefault();
     if (validateForm()) {
       console.log("Form Data", formData);
+      dispatch(
+        login({
+          email: formData.email,
+          password: formData.password,
+          loggedIn: true,
+        })
+      );
       history.push("/home");
     }
   };
@@ -73,9 +84,9 @@ const Login = () => {
           id="Login_form"
           onSubmit={handleSubmit}
         >
-          <a href="#" className="form_title">
+          <Link to="#" className="form_title">
             LOGIN
-          </a>
+          </Link>
           <div className="input_group">
             <input
               type="text"
@@ -91,7 +102,7 @@ const Login = () => {
           </div>
           <div className="input_group">
             <input
-              type="text"
+              type="password"
               name="password"
               id="password"
               placeholder="Enter password.."

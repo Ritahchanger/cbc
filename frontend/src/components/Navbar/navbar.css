@@ -59,6 +59,10 @@ color:#7FFFD4;
     left:0;
 
 }
+.school_link{
+    text-transform: lowercase;
+    font-size:1.5rem;
+}
 
 @media(max-width:500px){
     .ulList:hover::before{
