@@ -88,11 +88,11 @@ const Login = () => {
             LOGIN
           </Link>
           <div className="input_group">
+          <p className="form_lable">Email</p>
             <input
               type="text"
               name="email"
               id="email"
-              placeholder="Enter email.."
               value={formData.email}
               onChange={handleInputChange}
             />
@@ -101,11 +101,11 @@ const Login = () => {
             )}
           </div>
           <div className="input_group">
+          <p className="form_lable">Password</p>
             <input
               type="password"
               name="password"
               id="password"
-              placeholder="Enter password.."
               value={formData.password}
               onChange={handleInputChange}
             />

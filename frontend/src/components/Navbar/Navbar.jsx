@@ -9,12 +9,12 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.user?.user?.loggedIn);
 
-  const [activeNavItem,setActiveNavItem] = useState(null);
+  const [activeNavItem, setActiveNavItem] = useState(null);
 
-  const handleNavItemClick=(index)=>{
+  const handleNavItemClick = (index) => {
     setActiveNavItem(index);
-  }
-  
+  };
+
   const displayMenu = () => {
     setShowMenu(!showMenu);
   };
@@ -22,7 +22,7 @@ const Navbar = () => {
   const handleLogout = () => {
     dispatch(logout());
   };
-return (
+  return (
     <div>
       <nav className="nav" id="nav">
         <div className="container flex">
@@ -37,33 +37,51 @@ return (
             }
           >
             <ul className="flex">
-              <li className={`ulList ${activeNavItem === 0 && 'active'}`} onClick={() => handleNavItemClick(0)}>
+              <li
+                className={`ulList ${activeNavItem === 0 && "active"}`}
+                onClick={() => handleNavItemClick(0)}
+              >
                 <Link to="/home">HOME</Link>
               </li>
               {isLoggedIn ? (
                 <>
-                  <li className={`ulList ${activeNavItem === 1 && 'active'}`} onClick={() => handleNavItemClick(1)}>
+                  <li
+                    className={`ulList ${activeNavItem === 1 && "active"}`}
+                    onClick={() => handleNavItemClick(1)}
+                  >
                     <Link to="#" className="school_link">
                       PRE PRY
                     </Link>
                   </li>
-                  <li className={`ulList ${activeNavItem === 2 && 'active'}`} onClick={() => handleNavItemClick(2)}>
+                  <li
+                    className={`ulList ${activeNavItem === 2 && "active"}`}
+                    onClick={() => handleNavItemClick(2)}
+                  >
                     <Link to="#" className="school_link">
                       PRY
                     </Link>
                   </li>
 
-                  <li className={`ulList ${activeNavItem === 3 && 'active'}`} onClick={() => handleNavItemClick(3)}>
+                  <li
+                    className={`ulList ${activeNavItem === 3 && "active"}`}
+                    onClick={() => handleNavItemClick(3)}
+                  >
                     <Link to="#" className="school_link">
                       SNR SNDRY
                     </Link>
                   </li>
-                  <li className={`ulList ${activeNavItem === 4 && 'active'}`} onClick={() => handleNavItemClick(4)}>
+                  <li
+                    className={`ulList ${activeNavItem === 4 && "active"}`}
+                    onClick={() => handleNavItemClick(4)}
+                  >
                     <Link to="#" className="school_link">
                       SNR SNDRY
                     </Link>
                   </li>
-                  <li className={`ulList ${activeNavItem === 5 && 'active'}`} onClick={() => handleNavItemClick(5)}>
+                  <li
+                    className={`ulList ${activeNavItem === 5 && "active"}`}
+                    onClick={() => handleNavItemClick(5)}
+                  >
                     <Link to="#" className="school_link" onClick={handleLogout}>
                       LOGOUT
                     </Link>
@@ -71,10 +89,16 @@ return (
                 </>
               ) : (
                 <>
-                  <li className={`ulList ${activeNavItem === 5 && 'active'}`} onClick={() => handleNavItemClick(5)}>
+                  <li
+                    className={`ulList ${activeNavItem === 5 && "active"}`}
+                    onClick={() => handleNavItemClick(5)}
+                  >
                     <Link to="/login">LOGIN</Link>
                   </li>
-                  <li className={`ulList ${activeNavItem === 6 && 'active'}`} onClick={() => handleNavItemClick(6)}>
+                  <li
+                    className={`ulList ${activeNavItem === 6 && "active"}`}
+                    onClick={() => handleNavItemClick(6)}
+                  >
                     <Link to="/signup">SIGNUP</Link>
                   </li>
                 </>

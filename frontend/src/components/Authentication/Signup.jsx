@@ -12,61 +12,52 @@ const Signup = () => {
           </a>
           <div className="name_col flex">
             <div className="input_group">
+              <p className="form_lable">Firstname</p>
               <input
                 type="text"
                 name="fname"
                 id="fname"
-                placeholder="Enter firstname.."
               />
             </div>
             <div className="input_group">
+            <p className="form_lable">Secondname</p>
               <input
                 type="text"
                 name="sname"
                 id="second"
-                placeholder="Enter secondname.."
               />
             </div>
           </div>
           <div className="input_group">
-            <input
-              type="text"
-              name="level"
-              id="level"
-              placeholder="Enter level.."
-            />
-          </div>
+            <p className="form_lable">Registration no</p>
+              <input
+                type="text"
+                name="reg_no"
+              />
+            </div>
           <div className="input_group">
-            <input
-              type="text"
-              name="level"
-              id="level"
-              placeholder="Enter level.."
-            />
-          </div>
-          <div className="input_group">
-            <select name="level" id="level">
-                <option value="senior secondary">senior secondary</option>
-                <option value="Junior secondary">Junior secondary</option>
-                <option value="primary school">primary school</option>
-                <option value="pre-primary school">pre-primary school</option>
+            <select name="level" >
+              <option value="Pre-primary">Pre-primary</option>
+              <option value="Primary">Primary</option>
+              <option value="Junior secondary school">Junior secondary school</option>
+              <option value="Senor secondary school">Senior secondary school</option>
             </select>
           </div>
           <div className="name_col flex">
             <div className="input_group">
+            <p className="form_lable">Password</p>
               <input
-                type="text"
+                type="password"
                 name="password"
-                id="fname"
-                placeholder="Enter password.."
+                id="password"
               />
             </div>
             <div className="input_group">
+            <p className="form_lable">Confirm password</p>
               <input
-                type="text"
-                name="sname"
-                id="second"
-                placeholder="Confirm password.."
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
               />
             </div>
           </div>
