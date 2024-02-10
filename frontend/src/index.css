@@ -71,6 +71,10 @@ a{
   font-size:1.6rem;
   font-weight:bold;
 }
+.main_footer .row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
 .main_footer .footer_li p{
   font-size:1.3rem;;
 }
@@ -78,11 +82,17 @@ a{
 text-decoration: underline;
 cursor:pointer;
 }
+
 .main_footer .social_media{
   max-width:400px;
   width:100%;
   margin:0 auto;
   margin-top:2rem;
+}
+.social_media ul{
+  display:grid;
+  grid-gap:1;
+  grid-template-columns:repeat(6,1fr);
 }
 .main_footer .social_media li{
   width:50px;
@@ -109,9 +119,17 @@ cursor:pointer;
 
 
 
-
-
-
+@media(max-width:580px){
+  .main_footer .row{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .main_footer .col{
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    margin:0.5rem 0rem;
+  }
+}
 
 
 @media(max-width:760px){

@@ -25,3 +25,8 @@
     text-decoration: underline;
     color:var(--dark-blue);
 }
+.title-first{
+    font-size:2.3rem;
+    color:var(--dark-blue);
+    font-weight:600;
+}

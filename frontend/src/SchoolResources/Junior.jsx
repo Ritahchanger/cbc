@@ -18,6 +18,7 @@ const Junior = () => {
   return (
     <div className='container'>
         <div className="content">
+            <p className='title-first'>JUNIOR SCHOOL</p>
             { subjects.map((subject)=>(
                 <div className="subject_div">
                     <p>{subject}</p>

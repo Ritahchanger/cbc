@@ -26,7 +26,7 @@ const Footer = () => {
     {
         title:'Resources for Current Student',
         subTitleOne:'Resources For Faculty & Staff',
-        subTitleTwo:'Blookstore',
+        subTitleTwo:'Bookstore',
         subTitleFour:'Campus Map',
 
     },
@@ -42,7 +42,7 @@ const Footer = () => {
   return (
     <div className='main_footer'>
         <div className="container">
-            <div className="row flex">
+            <div className="row">
                 {footerData.map((item)=>(
                     <div className="col" key={item.title}>
                         <p className="title">{item.title}</p>
@@ -57,7 +57,7 @@ const Footer = () => {
             <div className="section_b">
                 <hr/>
                 <div className="social_media">
-                    <ul className="flex">
+                    <ul>
                         <li><Link to="#"><FontAwesomeIcon icon={faFacebook} /></Link></li>
                         <li><Link to="#"><FontAwesomeIcon icon={faTwitter} /></Link></li>
                         <li><Link to="#"><FontAwesomeIcon icon={faLinkedin} /></Link></li>
