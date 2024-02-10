@@ -14,7 +14,6 @@ const Navbar = () => {
   };
 
   const handleLogout = () => {
-   
     dispatch(logout());
   };
 
@@ -45,13 +44,13 @@ const Navbar = () => {
                   </li>
                   <li className="ulList">
                     <Link to="#" className="school_link">
-                     PRY
+                      PRY
                     </Link>
                   </li>
 
                   <li className="ulList">
                     <Link to="#" className="school_link">
-                    SNR SNDRY
+                      SNR SNDRY
                     </Link>
                   </li>
                   <li className="ulList">
