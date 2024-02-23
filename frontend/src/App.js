@@ -6,6 +6,9 @@ import Signup from "./components/Authentication/Signup";
 import './index.css'
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/home/Home";
+import Senior from "./pages/Senior/Senior";
+import Pri from "./pages/Pri/Pri";
+import Junior from "./pages/Junior/Junior";
 const App = () => {
 
 
@@ -19,6 +22,9 @@ const App = () => {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/home" component={Home} />
+          <Route path="/senior" component={Senior} />
+          <Route path="/primary" component={Pri} />
+          <Route path="/junior" component={Junior} />
         </Switch>
       </BrowserRouter>
     </div>

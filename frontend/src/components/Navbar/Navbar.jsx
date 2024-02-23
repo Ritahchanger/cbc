@@ -57,7 +57,7 @@ const Navbar = () => {
                     className={`ulList ${activeNavItem === 2 && "active"}`}
                     onClick={() => handleNavItemClick(2)}
                   >
-                    <Link to="#" className="school_link">
+                    <Link to="/primary" className="school_link">
                       PRY
                     </Link>
                   </li>
@@ -66,15 +66,15 @@ const Navbar = () => {
                     className={`ulList ${activeNavItem === 3 && "active"}`}
                     onClick={() => handleNavItemClick(3)}
                   >
-                    <Link to="#" className="school_link">
-                      SNR SNDRY
+                    <Link to="/junior" className="school_link">
+                      JNR SNDRY
                     </Link>
                   </li>
                   <li
                     className={`ulList ${activeNavItem === 4 && "active"}`}
                     onClick={() => handleNavItemClick(4)}
                   >
-                    <Link to="#" className="school_link">
+                    <Link to="/senior" className="school_link">
                       SNR SNDRY
                     </Link>
                   </li>
