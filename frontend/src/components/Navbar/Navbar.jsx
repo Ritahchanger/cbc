@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 const Navbar = () => {
+  const isAuthenticated = !!localStorage.getItem("email");
   const [showMenu, setShowMenu] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState(null);
-
   const handleNavItemClick = (index) => {
     setActiveNavItem(index);
   };
@@ -12,7 +12,7 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
   const handleLogout = () => {
-    localStorage.clear()
+    localStorage.clear();
   };
   return (
     <div>
@@ -35,6 +35,9 @@ const Navbar = () => {
               >
                 <Link to="/home">HOME</Link>
               </li>
+
+              {isAuthenticated ? (
+                <>
                   <li
                     className={`ulList ${activeNavItem === 1 && "active"}`}
                     onClick={() => handleNavItemClick(1)}
@@ -76,8 +79,9 @@ const Navbar = () => {
                       LOGOUT
                     </Link>
                   </li>
-              
-      
+                </>
+              ) : (
+                <>
                   <li
                     className={`ulList ${activeNavItem === 5 && "active"}`}
                     onClick={() => handleNavItemClick(5)}
@@ -90,7 +94,8 @@ const Navbar = () => {
                   >
                     <Link to="/signup">SIGNUP</Link>
                   </li>
-              
+                </>
+              )}
             </ul>
           </div>
           <div className="menu_bar">
