@@ -19,6 +19,9 @@ html{
 ul{
   list-style:none;
 }
+section{
+  padding:2rem;
+}
 a{
   text-decoration:none;
 }
@@ -29,6 +32,9 @@ a{
   text-align: center;
   font-weight:500;
   border-bottom:3px solid var(--dark-blue);
+}
+img{
+  width:100%;
 }
 .container {
   max-width: 1200px;
@@ -80,7 +86,7 @@ cursor:pointer;
 .social_media ul{
   display:grid;
   grid-gap:1;
-  grid-template-columns:repeat(6,1fr);
+  grid-template-columns:repeat(3,1fr);
 }
 .main_footer .social_media li{
   width:50px;
@@ -100,13 +106,15 @@ cursor:pointer;
   color:#fff;
   font-size:2rem;
 }
+.lesson_study{
+  margin-top:5rem;
+}
 
 
 /* HOME */
 
 .home .section_a{
   margin-top:5rem;
-  padding:2rem;
 }
 .home .grid{
   display: grid;
@@ -116,7 +124,7 @@ cursor:pointer;
 }
 .main_dashboard .card{
   box-shadow:0 0 5px rgba(0,0,0,0.25);
-  padding:2rem;
+  padding:1rem;
   border-radius:2px;
   display:flex;
   align-items:center;
@@ -124,20 +132,42 @@ cursor:pointer;
   text-align:center;
   flex-direction:column;
   cursor:pointer;
-  transition:all 0.5s;
   background:#fff;
 }
-.main_dashboard .card:hover{
-  transform: scale(1.1);
-}
-
 .main_dashboard .card p{
+  font-size:1.3rem;
+  text-align:center;
+}
+.main_dashboard .card p:hover{
+  text-decoration:underline;
+}
+.main_dashboard .card:hover .icon{
+  transform:scale(1.1);
+}
+.icon{
+  font-size:6rem;
+  color:var(--color-error);
+  padding:2rem;
+  transition:All 0.5s;
+}
+.title-first{
+  text-align:center;
+  border-bottom:1px solid #ccc;
+}
+.home_banner{
+  margin-top: 3rem;
+}
+.home_banner .col{
+  flex-basis:48%;
+}
+.home_banner .col:nth-child(1) p{
   font-size:2rem;
 }
-.section_a .title-first{
-  background:#000;
+.home_banner .container{
   padding:2rem;
-  color:#fff;
+}
+.impact_numbers span{
+  font-size:6rem;
 }
 
 
@@ -145,10 +175,37 @@ cursor:pointer;
 
 
 
-
+/* HOME CUSTOM FOOTER */
+.custom_footer {
+  padding:2rem;
+}
+.custom_footer .footer_content{
+  text-align: center;
+}
+.impact_numbers .wrapper{
+  padding:2rem;
+}
+.impact_numbers .wrapper{
+  text-align:center;
+}
+.impact_numbers .wrapper p{
+  font-size:3rem;
+  color:var(--color-error);
+  font-weight:700;
+}
+@media(max-width:440px){
+  .home .grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+  }
+}
 @media(max-width:580px){
   .main_footer .row{
     grid-template-columns:repeat(2,1fr);
+  }
+  .home .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
   .main_footer .col{
     display:flex;
