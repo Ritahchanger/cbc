@@ -15,9 +15,9 @@ This project is aimed at developing a comprehensive education system based on th
 ## Tech Stack
 
 - **Frontend**: React.js, Redux, HTML5, CSS3
-- **Backend**: Spring Boot, Java, MySQL
+- **Backend**: Spring Boot, Java, Postgre
 - **Authentication**: JSON Web Tokens (JWT)
-- **Database**: MySQL or PostgreSQL
+- **Database**: PostgreSQL
 - **Deployment**: Docker, Kubernetes (optional)
 
 ## Getting Started
