@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./auth.css";
 import { Link, useHistory } from "react-router-dom";
-import { login } from "../../reduxx/userSlice";
-import { useDispatch } from "react-redux";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +13,6 @@ const Login = () => {
     password: "",
   });
   const history = useHistory();
-  const dispatch = useDispatch();
 
   const validateForm = () => {
     let isValid = true;
@@ -63,17 +60,24 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Form Data", formData);
-      dispatch(
-        login({
-          email: formData.email,
-          password: formData.password,
-          loggedIn: true,
-        })
-      );
-      history.push("/home");
+      localStorage.setItem('email',formData.email);
+      localStorage.setItem('password',formData.password);
+      history.push('/home');
+    }else{
+      console.log('Form validatation failed');
     }
   };
+  useEffect(()=>{
+    const email = localStorage.getItem("email");
+    const password = localStorage.getItem('password');
+
+    if(email && password){
+      console.log("User is authenticated");
+    }else{
+      console.log("The user is not authenticated");
+    }
+
+  },[])
 
   return (
     <div className="authentication">
@@ -88,7 +92,7 @@ const Login = () => {
             LOGIN
           </Link>
           <div className="input_group">
-          <p className="form_lable">Email</p>
+            <p className="form_lable">Email</p>
             <input
               type="text"
               name="email"
@@ -101,7 +105,7 @@ const Login = () => {
             )}
           </div>
           <div className="input_group">
-          <p className="form_lable">Password</p>
+            <p className="form_lable">Password</p>
             <input
               type="password"
               name="password"

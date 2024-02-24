@@ -58,12 +58,9 @@ const Footer = () => {
                 <hr/>
                 <div className="social_media">
                     <ul>
-                        <li><Link to="#"><FontAwesomeIcon icon={faFacebook} /></Link></li>
-                        <li><Link to="#"><FontAwesomeIcon icon={faTwitter} /></Link></li>
                         <li><Link to="#"><FontAwesomeIcon icon={faLinkedin} /></Link></li>
                         <li><Link to="#"><FontAwesomeIcon icon={faYoutube} /></Link></li>
                         <li><Link to="#"><FontAwesomeIcon icon={faTwitter} /></Link></li>
-                        <li><Link to="#"><FontAwesomeIcon icon={faInstagram} /></Link></li>
                     </ul>
                 </div>
             </div>

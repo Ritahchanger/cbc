@@ -1,26 +1,18 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../../reduxx/userSlice";
-
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const dispatch = useDispatch();
-  const isLoggedIn = useSelector((state) => state.user?.user?.loggedIn);
-
   const [activeNavItem, setActiveNavItem] = useState(null);
 
   const handleNavItemClick = (index) => {
     setActiveNavItem(index);
   };
-
   const displayMenu = () => {
     setShowMenu(!showMenu);
   };
-
   const handleLogout = () => {
-    dispatch(logout());
+    localStorage.clear()
   };
   return (
     <div>
@@ -43,8 +35,6 @@ const Navbar = () => {
               >
                 <Link to="/home">HOME</Link>
               </li>
-              {isLoggedIn ? (
-                <>
                   <li
                     className={`ulList ${activeNavItem === 1 && "active"}`}
                     onClick={() => handleNavItemClick(1)}
@@ -86,9 +76,8 @@ const Navbar = () => {
                       LOGOUT
                     </Link>
                   </li>
-                </>
-              ) : (
-                <>
+              
+      
                   <li
                     className={`ulList ${activeNavItem === 5 && "active"}`}
                     onClick={() => handleNavItemClick(5)}
@@ -101,8 +90,7 @@ const Navbar = () => {
                   >
                     <Link to="/signup">SIGNUP</Link>
                   </li>
-                </>
-              )}
+              
             </ul>
           </div>
           <div className="menu_bar">
