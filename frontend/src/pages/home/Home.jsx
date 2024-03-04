@@ -20,16 +20,12 @@ const Home = () => {
     <div className="home">
       <Navbar />
       <section className="container section_a">
-        {/* <p className="title-first">
-          LET'S SUPPORT COMPETENCY FOR SUSTAINABILITY GUARANTEED RESULTS
-        </p> */}
         <div className="main_dashboard grid">
           {dashboardBoardItems.map((item) => (
-            <DashboardCard icon={item.icon} title={item.title} />
+            <DashboardCard icon={item.icon} title={item.title} path={item.path} />
           ))}
         </div>
       </section>
-
       <section className="home_banner">
         <div className="container">
           <div className="row flex">
@@ -62,20 +58,6 @@ const Home = () => {
             <p className="figures_description">Target impact lives</p>
           </div>
         </div>
-      </section>
-
-      <section className="custom_footer container">
-        <p className="footer_content">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
-          consequuntur, aliquam dolor mollitia quis consequatur fugiat deserunt
-          saepe id, commodi incidunt inventore. Vitae, quis et ab consectetur
-          consequatur nobis sed neque quam ex, cum dolores molestias porro iusto
-          facilis excepturi possimus, quos pariatur magnam asperiores? Molestias
-          molestiae reiciendis rerum officiis. Accusantium molestiae, minus
-          voluptatum rem unde quae reprehenderit doloribus perspiciatis enim
-          eius modi corrupti quia reiciendis at tempore quas vitae ipsa.
-          Voluptatibus rerum impedit vel nesciunt quas architecto eum at.
-        </p>
       </section>
     </div>
   );

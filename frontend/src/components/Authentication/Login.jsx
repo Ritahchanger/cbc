@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./auth.css";
 import { Link, useHistory } from "react-router-dom";
-
+import "./Login.css";
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",

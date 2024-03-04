@@ -8,90 +8,90 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 export const dashboardBoardItems=[
     {
         icon:faUser,
-        title:"User profile"
+        title:"User profile",
+        path:"/details/profile",
+        
     },
     {
         icon:faBook,
-        title:"Course Overview"
+        title:"Course Overview",
+        path:"/details/overview",
+        
     },
     {
         icon:faBell,
-        title:"Announcements"
-    },
-    {
-        icon:faBook,
-        title:"Course Overview"
-    },
-    {
-        icon:faBell,
-        title:"Announcements"
+        title:"Announcements",
+        path:"/details/announcements",
+        
     },
     {
         icon:faCalendar,
-        title:"Upcomming Assignments"
-    },
-    {
-        icon:faBook,
-        title:"Course Overview"
-    },
-    {
-        icon:faCalendar,
-        title:"Upcomming Assignments"
-    },
-    {
-        icon:faBook,
-        title:"Course Overview"
-    },
-    {
-        icon:faBell,
-        title:"Announcements"
+        title:"Upcomming Assignments",
+        path:"/details/assignments",
+        
     },
     {
         icon:faPieChart,
-        title:"Progress tracking"
+        title:"Progress tracking",
+        path:"/details/progress-tracking",
+        
     },
     {
         icon:faEnvelope,
-        title:"Messages/Notifications"
+        title:"Messages/Notifications",
+        path:"/details/notification",
+        
     }
 ]
 
+// 
+
 export const sub_jects=[
     {
-        link:'/subjects/mathematics',
-        lesson:'Mathematics'
+        link:'/subjects/social_studies',
+        lesson:'Social studies',
+        assignment:'<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSetEIVDZcbzdQ07MDFvJQgT8vZ7l2akAiItZ54AXPUhtaL7NQ/viewform?embedded=true" width="640" height="1004" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
     },
     {
         link:'/subjects/english',
-        lesson:'English'
+        lesson:'English',
+        assignment:"<iframe src='https://docs.google.com/forms/d/e/1FAIpQLSdB-kH6VzTd7ZhvfzLpmVEjgBYa--jmNi66BlK1QLaLCQgrcg/viewform?embedded=true' width='640' height='677' frameborder='0' marginheight='0' marginwidth='0'>Loading…</iframe>",
+    },
+    {
+        link:'/subjects/mathematics',
+        lesson:'Mathematics',
+        assignment:"",
     },
     {
         link:'/subjects/swahili',
-        lesson:'Swahili or Kanya Language'
+        lesson:'Kiswahili',
+        assignment:"",
     },
     {
         link:'/subjects/integrated_science',
-        lesson:'Integrated science'
+        lesson:'Integrated science',
+        assignment:"",
     },
-    {
-        link:'/subjects/social_studies',
-        lesson:'Social studies'
-    },
+   
     {
         link:'/subjects/business_studies',
-        lesson:'Business studies'
+        lesson:'Business studies',
+        assignment:'<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckfLvA5oLguIwj52sHIgqSTylBjk4R0SjLP4i8ROdRUEWHrQ/viewform?embedded=true" width="640" height="634" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
     },
     {
         link:'/subjects/agriculture',
-        lesson:'Agriculture'
+        lesson:'Agriculture',
+        assignment:'<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdXVTbpHAuqUbhasLO250P7DnI1vnUeOwRx3XdckWiy7dBncg/viewform?embedded=true" width="640" height="1074" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
     },
     {
         link:'/subjects/technical_cocurricular',
-        lesson:'Pre technical + Pre-Career Studies',
+        lesson:'Pre Technical ',
+        assignment:"",
     },
     {
         link:'/subjects/religious_education',
-        lesson:'Religious Education'
+        lesson:'Religious Education',
+        assignment:'<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQDmlcmRN0MXzlCyJKJi-QbGVG8Trp71rg_0FkobD98Oq0iA/viewform?embedded=true" width="640" height="704" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
     }
 
  ]

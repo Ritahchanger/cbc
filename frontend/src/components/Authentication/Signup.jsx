@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./auth.css";
 import { Link } from "react-router-dom";
-
+import "./Signup.css";
 const Signup = () => {
   const [formData, setFormData] = useState({
     fname: "",
@@ -58,7 +58,12 @@ const Signup = () => {
     } else if (formData.password.length < 8) {
       errors.password = "Password should be at least 8 characters long";
     }
-    if (formData.password !== formData.confirmPassword) {
+    if (!formData.confirmPassword.trim()) {
+      errors.confirmPassword = "Password is required";
+    } else if (formData.password.length < 8) {
+      errors.password = "Password should be at least 8 characters long";
+    }
+    else if(formData.password !== formData.confirmPassword) {
       errors.confirmPassword = "Passwords do not match";
     }
 
@@ -101,7 +106,8 @@ const Signup = () => {
               {errors.sname && <span className="error_message">{errors.sname}</span>}
             </div>
           </div>
-          <div className="input_group">
+         <div className="flex">
+         <div className="input_group">
             <p className="form_lable">Registration no</p>
             <input
               type="text"
@@ -112,15 +118,6 @@ const Signup = () => {
             {errors.reg_no && <span className="error_message">{errors.reg_no}</span>}
           </div>
           <div className="input_group">
-            <select name="level" value={formData.level} onChange={handleChange}>
-              <option value="">Select Level</option>
-              <option value="Pre-primary">STUDENT</option>
-              <option value="Primary">PARENT</option>
-              <option value="Junior secondary school">TUTOR</option>
-            </select>
-            {errors.level && <span className="error_message">{errors.level}</span>}
-          </div>
-          <div className="input_group">
             <p className="form_lable">Email</p>
             <input
               type="text"
@@ -129,6 +126,16 @@ const Signup = () => {
               onChange={handleChange}
             />
             {errors.email && <span className="error_message">{errors.email}</span>}
+          </div>
+         </div>
+          <div className="input_group">
+            <select name="level" value={formData.level} onChange={handleChange}>
+              <option value="">Select Level</option>
+              <option value="Pre-primary">STUDENT</option>
+              <option value="Primary">PARENT</option>
+              <option value="Junior secondary school">TUTOR</option>
+            </select>
+            {errors.level && <span className="error_message">{errors.level}</span>}
           </div>
           <div className="name_col flex">
             <div className="input_group">

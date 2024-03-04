@@ -21,7 +21,7 @@ const Banner = () => {
               with our e-learning platform
             </p>
             <h2 className="sub_header">Excellence our choice..</h2>
-            <Link className="hero_btn">GET STARTED</Link>
+            <Link  to="/home" className="hero_btn">GET STARTED</Link>
           </div>
           <div className="left_section">
             <img src={StudentImage} alt="" />

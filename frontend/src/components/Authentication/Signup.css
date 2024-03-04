@@ -1,0 +1,10 @@
+.authentication{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+  }.error_message{
+    position:absolute;
+    left:0;
+    bottom:-1rem;
+}

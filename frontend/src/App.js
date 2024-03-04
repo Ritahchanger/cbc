@@ -18,17 +18,23 @@ import Agriculture from "./lessons/Agriculture";
 import PreTechnical from "./lessons/PreTechnical";
 import ReligiousStudies from "./lessons/ReligiousStudies";
 
+// DASHBOARD ROUTES
+
+import Announcements from "./components/Dashboard/Announcements";
+import Assignment from "./components/Dashboard/Assignment";
+import Notification from "./components/Dashboard/Notification";
+import Messages from "./components/Dashboard/Messages";
+import Overview from "./components/Dashboard/Overview";
+import Profile from "./components/Dashboard/Profile";
+import Progress from "./components/Dashboard/Progress";
+
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const isAuthenticated = !!localStorage.getItem("email");
   return (
     <Route
       {...rest}
       render={(props) =>
-        isAuthenticated ? (
-          <Component {...props} />
-        ) : (
-          <Redirect to="/login" />
-        )
+        isAuthenticated ? <Component {...props} /> : <Redirect to="/login" />
       }
     />
   );
@@ -53,8 +59,14 @@ const App = () => {
             path="/subjects/integrated_science"
             component={IntegratedScience}
           />
-          <PrivateRoute path="/subjects/social_studies" component={SocialStudies} />
-          <PrivateRoute path="/subjects/business_studies" component={Business} />
+          <PrivateRoute
+            path="/subjects/social_studies"
+            component={SocialStudies}
+          />
+          <PrivateRoute
+            path="/subjects/business_studies"
+            component={Business}
+          />
           <PrivateRoute path="/subjects/agriculture" component={Agriculture} />
           <PrivateRoute
             path="/subjects/technical_cocurricular"
@@ -63,6 +75,32 @@ const App = () => {
           <PrivateRoute
             path="/subjects/religious_education"
             component={ReligiousStudies}
+          />
+
+          {/* DASHBOARD ROUTING */}
+          <PrivateRoute
+            path="/details/profile"
+            component={Profile}
+          />
+          <PrivateRoute
+            path="/details/overview"
+            component={Overview}
+          />
+          <PrivateRoute
+            path="/details/announcements"
+            component={Announcements}
+          />
+          <PrivateRoute
+            path="/details/assignments"
+            component={Assignment}
+          />
+          <PrivateRoute
+            path="/details/progress-tracking"
+            component={Progress}
+          />
+           <PrivateRoute
+            path="/details/notification"
+            component={Notification}
           />
         </Switch>
       </BrowserRouter>

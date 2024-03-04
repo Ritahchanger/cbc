@@ -1,0 +1,27 @@
+.main .container .sidebar{
+    border-right:1px solid #Ccc;
+    min-height:100vh;
+    width:300px;
+}
+.main .container .mainbar{
+    width:calc(100% - 300px);
+}
+.screen__title{
+    font-size:2rem;
+    text-transform: uppercase;
+}
+.dashboard__navigation li{
+    width:100%;
+    background:var(--dark-blue);
+    cursor:pointer;
+    transition:all 0.5s;
+    padding:1rem 0rem;
+}
+.dashboard__navigation li:hover{
+    background:#ff004f;
+}
+.dashboard__navigation li a{
+    font-size:1.8rem;
+    color:#fff;
+}
+
