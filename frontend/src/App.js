@@ -23,9 +23,8 @@ import ReligiousStudies from "./lessons/ReligiousStudies";
 import Announcements from "./components/Dashboard/Announcements";
 import Assignment from "./components/Dashboard/Assignment";
 import Notification from "./components/Dashboard/Notification";
-import Messages from "./components/Dashboard/Messages";
+import UserProfile from "./components/Profile/UserProfile";
 import Overview from "./components/Dashboard/Overview";
-import Profile from "./components/Dashboard/Profile";
 import Progress from "./components/Dashboard/Progress";
 
 import { useState,useEffect } from "react";
@@ -104,7 +103,7 @@ const App = () => {
           />
 
           {/* DASHBOARD ROUTING */}
-          <PrivateRoute path="/details/profile" component={Profile} />
+          <PrivateRoute path="/details/profile" component={UserProfile} />
           <PrivateRoute path="/details/overview" component={Overview} />
           <PrivateRoute
             path="/details/announcements"
@@ -118,6 +117,9 @@ const App = () => {
             component={Progress}
           />
           <PrivateRoute path="/details/notification" component={Notification} />
+         
+
+
         </Switch>
       </BrowserRouter>
     </div>

@@ -37,7 +37,7 @@ const Assignment = ({
                 marginwidth="0"
                 style={{width:'100%'}}
               >
-                Loading…
+                Loading….........................
               </iframe>):(
                 <h2>NO ASSIGNMENT</h2>
               )}
