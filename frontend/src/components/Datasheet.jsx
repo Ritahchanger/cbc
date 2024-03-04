@@ -55,7 +55,7 @@ export const sub_jects=[
     {
         link:'/subjects/english',
         lesson:'English',
-        assignment:"<iframe src='https://docs.google.com/forms/d/e/1FAIpQLSdB-kH6VzTd7ZhvfzLpmVEjgBYa--jmNi66BlK1QLaLCQgrcg/viewform?embedded=true' width='640' height='677' frameborder='0' marginheight='0' marginwidth='0'>Loading…</iframe>",
+        assignment:'<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdB-kH6VzTd7ZhvfzLpmVEjgBYa--jmNi66BlK1QLaLCQgrcg/viewform?embedded=true" width="640" height="677" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
     },
     {
         link:'/subjects/mathematics',

@@ -28,6 +28,8 @@ import Overview from "./components/Dashboard/Overview";
 import Profile from "./components/Dashboard/Profile";
 import Progress from "./components/Dashboard/Progress";
 
+import { useState,useEffect } from "react";
+
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const isAuthenticated = !!localStorage.getItem("email");
   return (
@@ -39,8 +41,29 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     />
   );
 };
-
 const App = () => {
+  const [currentIframe, setCurrentIframe] = useState(null);
+  const [iframeSrc, setIframeSrc] = useState('');
+
+  const handleNavLinkClick = (iframeSrc) => {
+    setCurrentIframe(iframeSrc);
+  };
+  const extractSrcFromIframe = (iframeCode) => {
+    const srcRegex = /<iframe[^>]*src="([^"]*)"[^>]*>/;
+    const match = iframeCode.match(srcRegex);
+    if (match && match.length >= 2) {
+      return match[1]; 
+    }
+    return null; 
+  };
+  useEffect(() => {
+    if (currentIframe) {
+      const extractedSrc = extractSrcFromIframe(currentIframe);
+      if (extractedSrc) {
+        setIframeSrc(extractedSrc);
+      }
+    }
+  }, [currentIframe]);
   return (
     <div>
       <BrowserRouter>
@@ -48,7 +71,10 @@ const App = () => {
           <Route exact path="/" component={Banner} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
-          <PrivateRoute path="/home" component={Home} />
+          <PrivateRoute
+            path="/home"
+            component={Home}
+          />
           <PrivateRoute path="/senior" component={Senior} />
           <PrivateRoute path="/primary" component={Pri} />
           <PrivateRoute path="/junior" component={Junior} />
@@ -78,30 +104,20 @@ const App = () => {
           />
 
           {/* DASHBOARD ROUTING */}
-          <PrivateRoute
-            path="/details/profile"
-            component={Profile}
-          />
-          <PrivateRoute
-            path="/details/overview"
-            component={Overview}
-          />
+          <PrivateRoute path="/details/profile" component={Profile} />
+          <PrivateRoute path="/details/overview" component={Overview} />
           <PrivateRoute
             path="/details/announcements"
             component={Announcements}
           />
-          <PrivateRoute
-            path="/details/assignments"
-            component={Assignment}
-          />
+          <PrivateRoute path="/details/assignments">
+            <Assignment currentIframe={currentIframe} handleNavLinkClick={handleNavLinkClick} setCurrentIframe={setCurrentIframe} iframeSrc={iframeSrc}/>
+          </PrivateRoute>
           <PrivateRoute
             path="/details/progress-tracking"
             component={Progress}
           />
-           <PrivateRoute
-            path="/details/notification"
-            component={Notification}
-          />
+          <PrivateRoute path="/details/notification" component={Notification} />
         </Switch>
       </BrowserRouter>
     </div>

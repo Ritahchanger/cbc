@@ -5,6 +5,7 @@ import Subjects from "../../SchoolResources/Subjects";
 import DashboardCard from "../../components/DashboardCard";
 import { dashboardBoardItems } from "../../components/Datasheet";
 import cbc from "../../images/cbc.jpg";
+
 const Home = () => {
   const [figuresCount, setfiguresCount] = useState(100);
   useEffect(() => {
@@ -22,7 +23,11 @@ const Home = () => {
       <section className="container section_a">
         <div className="main_dashboard grid">
           {dashboardBoardItems.map((item) => (
-            <DashboardCard icon={item.icon} title={item.title} path={item.path} />
+            <DashboardCard
+              icon={item.icon}
+              title={item.title}
+              path={item.path}
+            />
           ))}
         </div>
       </section>

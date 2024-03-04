@@ -1,10 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { sub_jects } from "../../Datasheet";
-const Sidebar = () => {
-  const getLesson=()=>{
-    console.log("Something has been clicked");
-  }
+const Sidebar = ({ currentIframe, handleNavLinkClick, setCurrentIframe }) => {
   return (
     <section className="sidebar">
       <div className="dashboard__navigation">
@@ -12,7 +9,11 @@ const Sidebar = () => {
         <ul>
           <ul>
             {sub_jects.map((subject) => (
-              <li onClick={getLesson}>
+              <li
+                onClick={() => {
+                  handleNavLinkClick(subject.assignment);
+                }}
+              >
                 <Link to="#">{subject.lesson}</Link>
               </li>
             ))}
