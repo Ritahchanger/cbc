@@ -138,3 +138,20 @@ export const sub_jects=[
         description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate architecto magnam dolorem enim sunt dicta obcaecati iusto, voluptatum, dignissimos aliquid molestiae, assumenda libero similique accusamus reprehenderit maxime alias amet itaque! Ullam sapiente dolor aspernatur quam amet ducimus non, fugiat rem laudantium unde at soluta vero commodi iste nostrum aliquid? Quisquam quia et adipisci itaque aperiam quae minima porro excepturi quis."
     }
  ]
+
+ export const profileDetails=[
+    {
+        fieldName:'Name:',
+        fieldValue:'Dennis Peter',
+    }, {
+        fieldName:'Email:',
+        fieldValue:'peterdennis573@gmail.com',
+    }, {
+        fieldName:'Registration no',
+        fieldValue:'CT201/106094/21',
+    }, {
+        fieldName:'Level of study',
+        fieldValue:'Premary',
+    },
+
+ ]

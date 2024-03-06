@@ -1,0 +1,86 @@
+.main__section{
+    display:flex;
+    justify-content:space-between;
+}
+.main__section .card:nth-child(1){
+    flex-basis:40%;
+    padding:1rem;
+    border:3px solid var(--dark-blue);
+    border-radius:10px;
+}
+.main__section .card:nth-child(1) img{
+    border-radius:10px;
+}
+.main__section .card:nth-child(2){
+    flex-basis:55%;
+    padding:1rem;
+    border:3px solid var(--dark-blue);   
+    border-radius:10px;
+}
+.custom_button{
+    background:var(--dark-blue);
+    display:inline-flex;
+    color:#FFF;
+    padding:1.4rem 5rem;
+    margin-top:2rem;
+    font-size:1.5rem;
+    border-radius:6px;
+    transition:all 0.5s;
+
+}
+.custom_button:hover{
+    transform:scale(1.1);
+}
+.field_title{
+    text-align:start;
+    font-size:1.8rem;
+    line-height:3rem;   
+}
+.col .field_title:nth-child(1){
+    flex-basis:50%;
+}
+.col .field_title:nth-child(2){
+    flex-basis:50%;
+}
+.modal{
+    background:rgba(0,0,0,0.85);
+    top:0;
+    position:absolute;
+    z-index:99;
+    right:0;
+    bottom:0;
+    left:0;
+    transition:1s;
+}
+
+
+/* EDIT PROFILE MODAL */
+.modal{
+    color:#FFF;
+}
+.modal input{
+    background:transparent;
+}
+.modal .edit_modal{
+    max-width:600px;
+    width:100%;
+    margin:0 auto;
+    padding:2rem;
+    background:#565656;
+}
+.modal input[type=submit]{
+    background:var(--dark-blue)
+}
+.modal input[type=submit]:hover{
+    background:#Ff004f;
+}
+.modal .form_lable{
+    color:#ababab;
+}
+.close_modal{
+    text-align:center;
+    font-size:4rem;
+    font-weight:700;
+    margin:1rem 0rem;
+    cursor:pointer;
+}

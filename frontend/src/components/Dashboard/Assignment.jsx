@@ -26,24 +26,21 @@ const Assignment = ({
             style={{ width: "100%", overflowY: "hidden" }}
           >
             <div className="mainbar">
-
-
-              { iframeSrc.length > 2 ? ( <iframe
-                src={iframeSrc}
-                width="640"
-                height="1004"
-                frameborder="0"
-                marginheight="0"
-                marginwidth="0"
-                style={{width:'100%'}}
-              >
-                Loading….........................
-              </iframe>):(
-                <h2>NO ASSIGNMENT</h2>
+              {iframeSrc.length > 2 ? (
+                <iframe
+                  src={iframeSrc}
+                  width="640"
+                  height="1004"
+                  frameborder="0"
+                  marginheight="0"
+                  marginwidth="0"
+                  style={{ width: "100%" }}
+                >
+                  Loading….........................
+                </iframe>
+              ) : (
+                <h2>WORK TO DO</h2>
               )}
-
-
-             
             </div>
           </section>
         </div>
