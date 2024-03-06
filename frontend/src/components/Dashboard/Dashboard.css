@@ -1,3 +1,4 @@
+
 .main{
     display:flex;
     align-items:center;
@@ -7,6 +8,7 @@
     border-right:1px solid #Ccc;
     min-height:100vh;
     flex-basis:30%;
+    background:var(--dark-blue);
 }
 .main .container .mainbar{
     flex-basis:70%;
@@ -17,7 +19,6 @@
 }
 .dashboard__navigation li{
     width:100%;
-    background:var(--dark-blue);
     cursor:pointer;
     transition:all 0.5s;
     padding:1rem 0rem;
@@ -29,4 +30,17 @@
     font-size:1.8rem;
     color:#fff;
 }
+#mainbar{
+    flex-basis:100%;
+}
 
+@media(max-width:630px){
+    .sidebar{
+        position:absolute;
+        background:var(--dark-blue);
+    }
+    .main .container .mainbar{
+        flex-basis:100%;
+    }
+
+}

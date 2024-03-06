@@ -3,24 +3,22 @@ import { Link } from "react-router-dom";
 import { sub_jects } from "../../Datasheet";
 const Sidebar = ({ currentIframe, handleNavLinkClick, setCurrentIframe }) => {
   return (
-    <section className="sidebar">
-      <div className="dashboard__navigation">
-        <p className="screen__title">Assignments</p>
+    <div className="dashboard__navigation">
+      <p className="screen__title">Assignments</p>
+      <ul>
         <ul>
-          <ul>
-            {sub_jects.map((subject) => (
-              <li
-                onClick={() => {
-                  handleNavLinkClick(subject.assignment);
-                }}
-              >
-                <Link to="#">{subject.lesson}</Link>
-              </li>
-            ))}
-          </ul>
+          {sub_jects.map((subject) => (
+            <li
+              onClick={() => {
+                handleNavLinkClick(subject.assignment);
+              }}
+            >
+              <Link to="#">{subject.lesson}</Link>
+            </li>
+          ))}
         </ul>
-      </div>
-    </section>
+      </ul>
+    </div>
   );
 };
 

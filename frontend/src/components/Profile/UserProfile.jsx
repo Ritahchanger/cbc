@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import ProfileImage from "../../images/passport.jpg";
+import ProfileImage from "../../images/user-1.png";
 import "./profile.css";
 import ProfileFIeld from "../ProfileFIeld";
 import { profileDetails } from "../Datasheet";
