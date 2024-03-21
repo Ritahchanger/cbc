@@ -20,9 +20,7 @@ export const dashboardBoardItems=[
     },
     {
         icon:faBell,
-        title:"Announcements",
-        path:"/details/announcements",
-        
+        title:"Announcements",        
     },
     {
         icon:faCalendar,
@@ -43,9 +41,7 @@ export const dashboardBoardItems=[
         
     }
 ]
-
 // 
-
 export const sub_jects=[
     {
         link:'/subjects/social_studies',

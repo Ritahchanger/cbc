@@ -1,6 +1,20 @@
+#Login_form{
+
+  height:100vh;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+#Login_form form{
+  width:100%;
+  height:fit-content;
+}
 .authentication{
     width:100%;
     height:100vh;
     display:flex;
     justify-content:center;
+    align-items:center;
   }

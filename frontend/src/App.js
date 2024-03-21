@@ -19,8 +19,6 @@ import PreTechnical from "./lessons/PreTechnical";
 import ReligiousStudies from "./lessons/ReligiousStudies";
 
 // DASHBOARD ROUTES
-
-import Announcements from "./components/Dashboard/Announcements";
 import Assignment from "./components/Dashboard/Assignment";
 import Notification from "./components/Dashboard/Notification";
 import UserProfile from "./components/Profile/UserProfile";
@@ -105,10 +103,6 @@ const App = () => {
           {/* DASHBOARD ROUTING */}
           <PrivateRoute path="/details/profile" component={UserProfile} />
           <PrivateRoute path="/details/overview" component={Overview} />
-          <PrivateRoute
-            path="/details/announcements"
-            component={Announcements}
-          />
           <PrivateRoute path="/details/assignments">
             <Assignment currentIframe={currentIframe} handleNavLinkClick={handleNavLinkClick} setCurrentIframe={setCurrentIframe} iframeSrc={iframeSrc}/>
           </PrivateRoute>

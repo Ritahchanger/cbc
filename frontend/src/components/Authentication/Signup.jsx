@@ -10,7 +10,7 @@ const Signup = () => {
     level: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -19,7 +19,7 @@ const Signup = () => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -62,8 +62,7 @@ const Signup = () => {
       errors.confirmPassword = "Password is required";
     } else if (formData.password.length < 8) {
       errors.password = "Password should be at least 8 characters long";
-    }
-    else if(formData.password !== formData.confirmPassword) {
+    } else if (formData.password !== formData.confirmPassword) {
       errors.confirmPassword = "Passwords do not match";
     }
 
@@ -73,106 +72,127 @@ const Signup = () => {
   return (
     <div className="authentication">
       <div className="container">
-        <form
-          action=""
-          className="authentication_form"
-          id="Login_form"
-          onSubmit={handleSubmit}
-        >
-          <a href="#" className="form_title">
-            SIGN UP
-          </a>
-          <div className="name_col flex">
-            <div className="input_group">
-              <p className="form_lable">Firstname</p>
-              <input
-                type="text"
-                name="fname"
-                id="fname"
-                value={formData.fname}
-                onChange={handleChange}
-              />
-              {errors.fname && <span className="error_message">{errors.fname}</span>}
+        <div className="signup-form" id="signup-form">
+          <form
+            action=""
+            className="authentication_form"
+            onSubmit={handleSubmit}
+          >
+            <a href="#" className="form_title">
+              SIGN UP
+            </a>
+            <div className="name_col flex">
+              <div className="input_group">
+                <p className="form_lable">Firstname</p>
+                <input
+                  type="text"
+                  name="fname"
+                  id="fname"
+                  value={formData.fname}
+                  onChange={handleChange}
+                />
+                {errors.fname && (
+                  <span className="error_message">{errors.fname}</span>
+                )}
+              </div>
+              <div className="input_group">
+                <p className="form_lable">Secondname</p>
+                <input
+                  type="text"
+                  name="sname"
+                  id="second"
+                  value={formData.sname}
+                  onChange={handleChange}
+                />
+                {errors.sname && (
+                  <span className="error_message">{errors.sname}</span>
+                )}
+              </div>
+            </div>
+            <div className="flex">
+              <div className="input_group">
+                <p className="form_lable">Registration no</p>
+                <input
+                  type="text"
+                  name="reg_no"
+                  value={formData.reg_no}
+                  onChange={handleChange}
+                />
+                {errors.reg_no && (
+                  <span className="error_message">{errors.reg_no}</span>
+                )}
+              </div>
+              <div className="input_group">
+                <p className="form_lable">Email</p>
+                <input
+                  type="text"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                {errors.email && (
+                  <span className="error_message">{errors.email}</span>
+                )}
+              </div>
             </div>
             <div className="input_group">
-              <p className="form_lable">Secondname</p>
-              <input
-                type="text"
-                name="sname"
-                id="second"
-                value={formData.sname}
+              <select
+                name="level"
+                value={formData.level}
                 onChange={handleChange}
-              />
-              {errors.sname && <span className="error_message">{errors.sname}</span>}
+              >
+                <option value="">Select Level</option>
+                <option value="Pre-primary">STUDENT</option>
+                <option value="Primary">PARENT</option>
+                <option value="Junior secondary school">TUTOR</option>
+              </select>
+              {errors.level && (
+                <span className="error_message">{errors.level}</span>
+              )}
             </div>
-          </div>
-         <div className="flex">
-         <div className="input_group">
-            <p className="form_lable">Registration no</p>
-            <input
-              type="text"
-              name="reg_no"
-              value={formData.reg_no}
-              onChange={handleChange}
-            />
-            {errors.reg_no && <span className="error_message">{errors.reg_no}</span>}
-          </div>
-          <div className="input_group">
-            <p className="form_lable">Email</p>
-            <input
-              type="text"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            {errors.email && <span className="error_message">{errors.email}</span>}
-          </div>
-         </div>
-          <div className="input_group">
-            <select name="level" value={formData.level} onChange={handleChange}>
-              <option value="">Select Level</option>
-              <option value="Pre-primary">STUDENT</option>
-              <option value="Primary">PARENT</option>
-              <option value="Junior secondary school">TUTOR</option>
-            </select>
-            {errors.level && <span className="error_message">{errors.level}</span>}
-          </div>
-          <div className="name_col flex">
-            <div className="input_group">
-              <p className="form_lable">Password</p>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                value={formData.password}
-                onChange={handleChange}
-              />
-              {errors.password && <span className="error_message">{errors.password}</span>}
+            <div className="name_col flex">
+              <div className="input_group">
+                <p className="form_lable">Password</p>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                />
+                {errors.password && (
+                  <span className="error_message">{errors.password}</span>
+                )}
+              </div>
+              <div className="input_group">
+                <p className="form_lable">Confirm password</p>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                />
+                {errors.confirmPassword && (
+                  <span className="error_message">
+                    {errors.confirmPassword}
+                  </span>
+                )}
+              </div>
             </div>
-            <div className="input_group">
-              <p className="form_lable">Confirm password</p>
-              <input
-                type="password"
-                name="confirmPassword"
-                id="confirmPassword"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-              />
-              {errors.confirmPassword && <span className="error_message">{errors.confirmPassword}</span>}
-            </div>
-          </div>
-          <input type="submit" value="SIGN UP" />
-          <p className="login_handler">
-            <br />
-            <Link to="#">Have account.?</Link>
-            <br />
-            OR
-            <Link to="/login">
+            <input type="submit" value="SIGN UP" />
+            <p className="login_handler">
               <br />
-              Login
-            </Link>
-          </p>
-        </form>
+              <Link to="#">Have account.?</Link>
+              <br />
+              OR
+              <Link to="/login">
+                <br />
+                Login
+              </Link>
+            </p>
+          </form>
+        </div>
       </div>
     </div>
   );

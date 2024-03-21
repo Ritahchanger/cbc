@@ -26,7 +26,7 @@ const Home = () => {
             <DashboardCard
               icon={item.icon}
               title={item.title}
-              path={item.path}
+              path={item.path || '#'}
             />
           ))}
         </div>

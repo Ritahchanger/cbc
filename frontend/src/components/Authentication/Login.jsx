@@ -82,10 +82,10 @@ const Login = () => {
   return (
     <div className="authentication">
       <div className="container">
+        <div className="Login_form" id="Login_form">
         <form
           action=""
           className="authentication_form"
-          id="Login_form"
           onSubmit={handleSubmit}
         >
           <Link to="#" className="form_title">
@@ -127,6 +127,7 @@ const Login = () => {
             <Link to="/signup">Signup</Link>
           </p>
         </form>
+        </div>
       </div>
     </div>
   );
