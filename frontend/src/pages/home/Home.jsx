@@ -17,6 +17,14 @@ const Home = () => {
     incrementFigures();
     return () => clearTimeout();
   }, [figuresCount]);
+
+  const [ announcementModal,displayAnnouncementModal ] = useState(false);
+
+  const displayModal = ()=>{
+    displayAnnouncementModal(!announcementModal);
+  }
+
+
   return (
     <div className="home">
       <Navbar />
@@ -25,10 +33,12 @@ const Home = () => {
           {dashboardBoardItems.map((item) => (
             <DashboardCard
               key={item.iD}
+              iD={item.iD}
               icon={item.icon}
               title={item.title}
               path={item.path || "#"}
-            ></DashboardCard>
+              displayModal={displayModal}
+            />
           ))}
         </div>
       </section>
@@ -55,44 +65,27 @@ const Home = () => {
       </section>
 
       {/* MODAL */}
-
-
-
-      <div
-        class="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">
-                Modal title
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">...</div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Understood
-              </button>
-            </div>
+      {/* custom-modal */}
+      <div className={`custom-modal ${announcementModal ? 'active':''}`}>
+        <div className="container">
+          <div className="modal-body">
+            <p className="close-button" onClick={displayModal} >&times;</p>
+            <div className="title">NO ANNOUNCEMENTS</div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              libero explicabo omnis eos debitis, amet architecto corporis
+              necessitatibus aliquid quidem.
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              libero explicabo omnis eos debitis, amet architecto corporis
+              necessitatibus aliquid quidem.
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              libero explicabo omnis eos debitis, amet architecto corporis
+              necessitatibus aliquid quidem.
+            </p>
           </div>
         </div>
       </div>
@@ -113,5 +106,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;

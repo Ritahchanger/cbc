@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./auth.css";
-import { Link,useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Signup.css";
+
 const Student = () => {
   const history = useHistory();
   const [formData, setFormData] = useState({
@@ -20,6 +21,12 @@ const Student = () => {
     setFormData({
       ...formData,
       [name]: value,
+    });
+
+    // Clear the error for the corresponding field when user starts typing
+    setErrors({
+      ...errors,
+      [name]: "",
     });
   };
 
@@ -58,8 +65,8 @@ const Student = () => {
     }
     if (!formData.confirmPassword.trim()) {
       errors.confirmPassword = "Password is required";
-    } else if (formData.password.length < 8) {
-      errors.password = "Password should be at least 8 characters long";
+    } else if (formData.confirmPassword.length < 8) {
+      errors.confirmPassword = "Password should be at least 8 characters long";
     } else if (formData.password !== formData.confirmPassword) {
       errors.confirmPassword = "Passwords do not match";
     }
