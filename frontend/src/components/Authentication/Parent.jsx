@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "./auth.css";
 import { Link } from "react-router-dom";
 import "./Signup.css";
-const Signup = () => {
+const Parent = () => {
   const [formData, setFormData] = useState({
     fname: "",
     sname: "",
     reg_no: "",
-    level: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -45,9 +44,6 @@ const Signup = () => {
     if (!formData.reg_no.trim()) {
       errors.reg_no = "Registration number is required";
     }
-    if (!formData.level.trim()) {
-      errors.level = "Level is required";
-    }
     if (!formData.email.trim()) {
       errors.email = "Email is required";
     } else if (!formData.email.match(emailRegex)) {
@@ -79,7 +75,7 @@ const Signup = () => {
             onSubmit={handleSubmit}
           >
             <a href="#" className="form_title">
-              SIGN UP
+            PARENT SIGNUP
             </a>
             <div className="name_col flex">
               <div className="input_group">
@@ -111,7 +107,7 @@ const Signup = () => {
             </div>
             <div className="flex">
               <div className="input_group">
-                <p className="form_lable">Registration no</p>
+                <p className="form_lable">Contact no</p>
                 <input
                   type="text"
                   name="reg_no"
@@ -134,21 +130,6 @@ const Signup = () => {
                   <span className="error_message">{errors.email}</span>
                 )}
               </div>
-            </div>
-            <div className="input_group">
-              <select
-                name="level"
-                value={formData.level}
-                onChange={handleChange}
-              >
-                <option value="">Select Level</option>
-                <option value="Pre-primary">STUDENT</option>
-                <option value="Primary">PARENT</option>
-                <option value="Junior secondary school">TUTOR</option>
-              </select>
-              {errors.level && (
-                <span className="error_message">{errors.level}</span>
-              )}
             </div>
             <div className="name_col flex">
               <div className="input_group">
@@ -198,4 +179,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Parent;

@@ -2,7 +2,9 @@ import React from 'react'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import Banner from './pages/Banner/Banner'
 import Login from './components/Authentication/Login'
-import Signup from './components/Authentication/Signup'
+import Student from './components/Authentication/Student'
+import Tutor from './components/Authentication/Tutor'
+import Parent from './components/Authentication/Parent'
 import './index.css'
 import Home from './pages/home/Home'
 import Senior from './pages/Senior/Senior'
@@ -68,7 +70,9 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={Banner} />
           <Route path='/login' component={Login} />
-          <Route path='/signup' component={Signup} />
+          <Route path='/tutor-signup' component={Tutor} />
+          <Route path='/parent-signup' component={Parent} />
+          <Route path='/student-signup' component={Student} />
           <Route path='/branch' component={Branch} />
           <Route path='/home' component={Home} />
           <PrivateRoute path='/senior' component={Senior} />
