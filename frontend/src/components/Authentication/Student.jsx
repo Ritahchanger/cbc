@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./auth.css";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import "./Signup.css";
 const Student = () => {
+  const history = useHistory();
   const [formData, setFormData] = useState({
     fname: "",
     sname: "",
@@ -27,6 +28,7 @@ const Student = () => {
     const validationErrors = validateForm(formData);
     if (Object.keys(validationErrors).length === 0) {
       console.log("Form submitted successfully");
+      history.push('/login')
     } else {
       setErrors(validationErrors);
     }
