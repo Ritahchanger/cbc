@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 const Navbar = () => {
+
+  const history = useHistory()
+
   const isAuthenticated = !!localStorage.getItem("email");
   const [showMenu, setShowMenu] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState(null);
@@ -13,6 +16,7 @@ const Navbar = () => {
   };
   const handleLogout = () => {
     localStorage.clear();
+    history.push('/');
   };
   return (
     <div>
@@ -108,5 +112,4 @@ const Navbar = () => {
     </div>
   );
 };
-
 export default Navbar;

@@ -7,34 +7,40 @@ import { faPieChart } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 export const dashboardBoardItems=[
     {
+        iD:1,
         icon:faUser,
         title:"User profile",
         path:"/details/profile",
         
     },
     {
+        iD:2,
         icon:faBook,
         title:"Course Overview",
         path:"/details/overview",
         
     },
     {
+        iD:3,
         icon:faBell,
         title:"Announcements",        
     },
     {
+        iD:4,
         icon:faCalendar,
         title:"Upcomming Assignments",
         path:"/details/assignments",
         
     },
     {
+        iD:5,
         icon:faPieChart,
         title:"Progress tracking",
         path:"/details/progress-tracking",
         
     },
     {
+        iD:6,
         icon:faEnvelope,
         title:"Messages/Notifications",
         path:"/details/notification",

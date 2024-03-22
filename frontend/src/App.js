@@ -24,6 +24,7 @@ import Notification from "./components/Dashboard/Notification";
 import UserProfile from "./components/Profile/UserProfile";
 import Overview from "./components/Dashboard/Overview";
 import Progress from "./components/Dashboard/Progress";
+import Branch from "./components/Branch/Branch";
 
 import { useState,useEffect } from "react";
 
@@ -98,6 +99,10 @@ const App = () => {
           <PrivateRoute
             path="/subjects/religious_education"
             component={ReligiousStudies}
+          />
+          <PrivateRoute
+            path="/branch"
+            component={Branch}
           />
 
           {/* DASHBOARD ROUTING */}

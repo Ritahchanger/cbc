@@ -1,22 +1,24 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 html{
   scroll-behavior:smooth;
   overflow-x:hidden;
-  font-family: "Outfit", sans-serif;
   font-size:62.5%;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 :root{
   --color-white:#fff;
   --dark-blue:#00308F;
   --color-error:#ff004f;
   --color-black:#000;
+  --color-gray:#ccc;
+}
+body{
+  font-family: "Outfit", sans-serif;
 }
 ul{
   list-style:none;
@@ -116,6 +118,12 @@ cursor:pointer;
 .lesson_study{
   margin-top:5rem;
 }
+.btn{
+  background:var(--dark-blue);
+  width:150px;
+  color:var(--color-white);
+  font-size:1.5rem;
+}
 
 
 /* HOME */
@@ -208,6 +216,25 @@ cursor:pointer;
 .section_a{
   box-shadow: 0 0 5px rgba(0,0,0,0.25);
 }
+
+
+
+
+
+/* MODALS */
+#modal-dialog{
+  z-index:99;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media(max-width:440px){
   .home .grid{

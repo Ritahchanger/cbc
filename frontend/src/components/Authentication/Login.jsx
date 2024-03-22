@@ -124,7 +124,7 @@ const Login = () => {
             <br />
             OR
             <br />
-            <Link to="/signup">Signup</Link>
+            <Link to="/branch">Signup</Link>
           </p>
         </form>
         </div>
