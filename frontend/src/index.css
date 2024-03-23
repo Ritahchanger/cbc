@@ -16,12 +16,17 @@ html {
   --color-error: #ff004f;
   --color-black: #000;
   --color-gray: #ccc;
+  --box-shadow:0 0 5px rgba(0,0,0,0.25);
+  --font-large:2rem;
 }
 body {
   font-family: "Outfit", sans-serif;
 }
 ul {
   list-style: none;
+}
+.font-large{
+  font-size:var(--font-large);
 }
 section {
   padding: 2rem;
@@ -226,7 +231,7 @@ img {
   color: var(--color-white);
   text-align: center;
   z-index: 99;
-  display:flex;
+  display:none;
   justify-content: center;
   transition: all 0.5s;
   align-items: center;

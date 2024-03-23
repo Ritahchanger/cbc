@@ -2,5 +2,15 @@
     margin-top:6rem;
 }
 .progress .title{
-    text-align: center;
+    text-align:start;
+    color:var(  --dark-blue);
+}
+.graph_container{
+ box-shadow:var(--box-shadow); 
+ border-radius:10px;  
+ display:flex;
+ align-items:center;
+ text-align: center;
+ justify-content:center;
+ margin-bottom:2rem;
 }

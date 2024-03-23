@@ -74,7 +74,7 @@ const App = () => {
           <Route path='/parent-signup' component={Parent} />
           <Route path='/student-signup' component={Student} />
           <Route path='/branch' component={Branch} />
-          <Route path='/home' component={Home} />
+          <PrivateRoute path='/home' component={Home} />
           <PrivateRoute path='/senior' component={Senior} />
           <PrivateRoute path='/primary' component={Pri} />
           <PrivateRoute path='/junior' component={Junior} />

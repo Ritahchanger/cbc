@@ -4,6 +4,7 @@ import { Line, Pie, Bar } from "react-chartjs-2";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import "./progress.css";
+import Analytics from "../Analytics/Analytics";
 const Progress = () => {
   const generateRandomMarks = () => {
     return Math.floor(Math.random() * 101); // Generates a random number between 0 and 100
@@ -35,8 +36,6 @@ const Progress = () => {
     ],
   };
 
-
-
   const pieColors = [
     "rgb(255, 99, 132)",
     "rgb(54, 162, 235)",
@@ -48,7 +47,7 @@ const Progress = () => {
     "rgb(0, 255, 255)",
     "rgb(128, 128, 128)",
   ];
-  
+
   const pieData = {
     labels: subjects,
     datasets: [
@@ -61,36 +60,41 @@ const Progress = () => {
       },
     ],
   };
-  
-
 
   return (
     <div className="progress">
       <Navbar />
       <div className="container">
         <p className="title">SUBJECTS MARKS PERFORMANCE</p>
-        <Bar data={data} />
+        <div className="graph_container">
+          <Bar data={data} />
+        </div>
         <p className="title">STUDENT PERSONAL PERFORMANCE</p>
-        <Line data={data} />
+        <div className="graph_container">
+          <Line data={data} />
+        </div>
         <p className="title">CLASS PERFORMANCE</p>
 
-        <Pie
-          data={pieData}
-          options={{
-            plugins: {
-              title: {
-                display: true,
-                text: "Users Gained between 2016-2020",
+        <div className="graph_container">
+          <Pie
+            data={pieData}
+            options={{
+              plugins: {
+                title: {
+                  display: true,
+                  text: "Users Gained between 2016-2020",
+                },
               },
-            },
-          }}
-        />
+            }}
+          />
+        </div>
 
-        <Line data={data} />
         <p className="title">SCHOOL PERFORMANCE</p>
-        <Line data={data} />
+        <div className="graph_container">
+          <Line data={data} />
+        </div>
       </div>
-      <Footer />
+     <Analytics/>
     </div>
   );
 };
