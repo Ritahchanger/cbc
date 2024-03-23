@@ -64,8 +64,6 @@ const Progress = () => {
   
 
 
-
-
   return (
     <div className="progress">
       <Navbar />

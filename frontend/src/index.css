@@ -226,7 +226,7 @@ img {
   color: var(--color-white);
   text-align: center;
   z-index: 99;
-  display:none;
+  display:flex;
   justify-content: center;
   transition: all 0.5s;
   align-items: center;
@@ -243,6 +243,7 @@ img {
   position: relative;
   color: var(--color-black);
   padding:2rem;
+
 }
 .modal-body p {
   font-size: 1.7rem;

@@ -72,17 +72,42 @@ const Home = () => {
             <p className="close-button" onClick={displayModal} >&times;</p>
             <div className="title">NO ANNOUNCEMENTS</div>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              1.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
               libero explicabo omnis eos debitis, amet architecto corporis
               necessitatibus aliquid quidem.
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              2.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
               libero explicabo omnis eos debitis, amet architecto corporis
               necessitatibus aliquid quidem.
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              3.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              libero explicabo omnis eos debitis, amet architecto corporis
+              necessitatibus aliquid quidem.
+            </p>
+            <p>
+              4.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              libero explicabo omnis eos debitis, amet architecto corporis
+              necessitatibus aliquid quidem.
+            </p>
+            <p>
+              5.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              libero explicabo omnis eos debitis, amet architecto corporis
+              necessitatibus aliquid quidem.
+            </p>
+            <p>
+              6.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              libero explicabo omnis eos debitis, amet architecto corporis
+              necessitatibus aliquid quidem.
+            </p>
+            <p>
+              7.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              libero explicabo omnis eos debitis, amet architecto corporis
+              necessitatibus aliquid quidem.
+            </p>
+            <p>
+              8.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
               libero explicabo omnis eos debitis, amet architecto corporis
               necessitatibus aliquid quidem.
             </p>
