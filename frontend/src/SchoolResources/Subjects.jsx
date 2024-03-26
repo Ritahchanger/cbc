@@ -5,13 +5,10 @@ import { Link } from "react-router-dom";
 import { sub_jects } from "../components/Datasheet";
 
 const Subjects = ({ name, id }) => {
-  const [studentSubject, setStudentSubject] = useState({});
+  const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
 
   const handleSubjectsDisplay = (courseIndex) => {
-    setStudentSubject((prevState) => ({
-      ...prevState,
-      [courseIndex]: !prevState[courseIndex]
-    }));
+    setOpenDropdownIndex((prevIndex) => (prevIndex === courseIndex ? null : courseIndex));
   };
 
   return (
@@ -34,7 +31,7 @@ const Subjects = ({ name, id }) => {
                         <i className="fa-solid fa-caret-down"></i>
                       </span>{" "}
                     </p>
-                    <ul className={`grade-ul ${studentSubject[courseIndex] ? 'active' : ''}`}>
+                    <ul className={`grade-ul ${openDropdownIndex === courseIndex ? 'active' : ''}`}>
                       {course.subjects.map((lesson, lessonIndex) => (
                         <li key={lessonIndex}>{lesson.lession_subjecs}</li>
                       ))}
