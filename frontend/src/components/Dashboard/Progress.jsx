@@ -2,9 +2,9 @@ import React from "react";
 import Chart from "chart.js/auto";
 import { Line, Pie, Bar } from "react-chartjs-2";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
+
 import "./progress.css";
-import Analytics from "../Analytics/Analytics";
+
 const Progress = () => {
   const generateRandomMarks = () => {
     return Math.floor(Math.random() * 101); // Generates a random number between 0 and 100
@@ -94,7 +94,6 @@ const Progress = () => {
           <Line data={data} />
         </div>
       </div>
-     <Analytics/>
     </div>
   );
 };
