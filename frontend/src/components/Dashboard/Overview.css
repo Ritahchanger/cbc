@@ -16,6 +16,8 @@
 .announcements .grid {
   margin-top: 3rem;
   grid-gap: 2rem;
+  display:grid;
+  grid-template-columns:repeat(1,4fr);
 }
 .overview-modal{
     position:absolute;

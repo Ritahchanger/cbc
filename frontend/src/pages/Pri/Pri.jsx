@@ -8,7 +8,6 @@ const Pri = () => {
     <div>
       <Navbar />
       <Subjects name="PRIMARY SCHOOL" id="2" />
-      <Footer />
     </div>
   );
 };

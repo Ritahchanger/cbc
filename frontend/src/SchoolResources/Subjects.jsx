@@ -1,33 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Resources.css";
 import { Link } from "react-router-dom";
 
 import { sub_jects } from "../components/Datasheet";
 
-const Subjects = ({name,id}) => {
+const Subjects = ({ name, id }) => {
+  const [studentSubject, setStudentSubject] = useState({});
+
+  const handleSubjectsDisplay = (gradeIndex) => {
+    setStudentSubject((prevState) => ({
+      ...prevState,
+      [gradeIndex]: true
+    }));
+  };
+
+  const handleMouseLeave = (gradeIndex) => {
+    setStudentSubject((prevState) => ({
+      ...prevState,
+      [gradeIndex]: false
+    }));
+  };
+
   return (
     <div className="container">
       <div className="content">
         <p className="title-first">{name}</p>
 
         {sub_jects.map((subject, index) => (
-          <div className="grade-wrapper">
+          <div className="grade-wrapper" key={index}>
             {subject.iD === id ? (
               <div className="subject_div">
-                {subject.grades.map((course) => (
-                  <>
-                    <p className="grade-level">
+                {subject.grades.map((course, courseIndex) => (
+                  <div key={courseIndex} className="subject-container">
+                    <p
+                      className="grade-level"
+                      onMouseEnter={() => handleSubjectsDisplay(courseIndex)}
+                      onMouseLeave={() => handleMouseLeave(courseIndex)}
+                    >
                       {course.grade}{" "}
                       <span className="arrow-dropdown">
-                        <i class="fa-solid fa-caret-down"></i>
+                        <i className="fa-solid fa-caret-down"></i>
                       </span>{" "}
                     </p>
-                    <ul class="grade-ul">
-                      {course.subjects.map((lession) => (
-                        <li>{lession.lession_subjecs}</li>
+                    <ul className={`grade-ul ${studentSubject[courseIndex] ? 'active' : ''}`}>
+                      {course.subjects.map((lesson, lessonIndex) => (
+                        <li key={lessonIndex}>{lesson.lession_subjecs}</li>
                       ))}
                     </ul>
-                  </>
+                  </div>
                 ))}
               </div>
             ) : null}

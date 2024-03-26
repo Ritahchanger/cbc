@@ -78,7 +78,7 @@
     background:var(--dark-blue)
 }
 .modal input[type=submit]:hover{
-    background:#Ff004f;
+    background:#fff;
 }
 .modal .form_lable{
     color:#ababab;

@@ -18,6 +18,7 @@
     margin:0.3rem 0rem;
     cursor: pointer;
     flex-direction: column;
+    position:relative;
 }
 .subject_div p{
     font-size:1.4rem;
@@ -35,23 +36,24 @@
     width:100%;
 }
 .subject_div .grade-level{
-    font-size:3em;
+    font-size:2.5rem;
     background:#444;
-    width:100%;
+    min-width:350px;
     color:#FFF;
     text-align:center;
     cursor: pointer;
     transition:all 0.5s;
+    padding:1rem 0rem;;
+    margin:1rem 0rem;
 }
 .subject_div .grade-level:hover{
     background:#000;
 }
 .subject_div .grade-level .arrow-dropdown{
-    color:red;
+    color: #fff;;
     transform:rotateZ(45deg);
 }
 .grade-ul{
-    background:#f2f2f2;
     list-style:none;
     padding:0;
     margin:0;
@@ -60,13 +62,26 @@
     align-items:center;
     text-align:center;
     min-width:350px;
-    display:none;
+    transition:All 0.5s;
+    position:absolute;
+    background:#fff000;
+    top:80%;
+    z-index:9;
 }
-.grade-ul .active{
+.subject-container{
+    position: relative;
+}
+.grade-ul.active{
     display:flex;
+    transition:All 0.5s;
 }
 .grade-ul li{
     width:100%;
-    margin:1.5rem 0rem;
+    padding:2rem;
     font-size:2rem;
+    transition:all 0.5s;
+}
+.grade-ul li:hover{
+    background:#000;
+    color:#fff;
 }
