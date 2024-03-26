@@ -38,7 +38,8 @@
 .subject_div .grade-level{
     font-size:2.5rem;
     background:#444;
-    min-width:350px;
+    max-width:350px;
+    width:100%;
     color:#FFF;
     text-align:center;
     cursor: pointer;
