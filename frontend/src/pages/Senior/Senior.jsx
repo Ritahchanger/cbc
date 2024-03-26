@@ -8,7 +8,7 @@ const Senior = () => {
     <div>
       <Navbar />
       <Subjects name="SENIOR SECONDARY SCHOOL" id="4" />
-      <Footer />
+     
     </div>
   );
 };

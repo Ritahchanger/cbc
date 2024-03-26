@@ -6,7 +6,7 @@ const PriPrimary = () => {
       <div>
         <Navbar />
         <Subjects name="PRE PRIMARY" id="1" />
-        <Footer />
+       
       </div>
     );
   };
