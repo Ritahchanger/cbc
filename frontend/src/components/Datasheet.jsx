@@ -43,59 +43,59 @@ export const dashboardBoardItems = [
   },
 ];
 //
-export const sub_jects = [
-  {
-    link: "/subjects/social_studies",
-    lesson: "Social studies",
-    assignment:
-      '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSetEIVDZcbzdQ07MDFvJQgT8vZ7l2akAiItZ54AXPUhtaL7NQ/viewform?embedded=true" width="640" height="1004" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
-  },
-  {
-    link: "/subjects/english",
-    lesson: "English",
-    assignment:
-      '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdB-kH6VzTd7ZhvfzLpmVEjgBYa--jmNi66BlK1QLaLCQgrcg/viewform?embedded=true" width="640" height="677" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
-  },
-  {
-    link: "/subjects/mathematics",
-    lesson: "Mathematics",
-    assignment: "",
-  },
-  {
-    link: "/subjects/swahili",
-    lesson: "Kiswahili",
-    assignment: "",
-  },
-  {
-    link: "/subjects/integrated_science",
-    lesson: "Integrated science",
-    assignment: "",
-  },
+// export const sub_jects = [
+//   {
+//     link: "/subjects/social_studies",
+//     lesson: "Social studies",
+//     assignment:
+//       '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSetEIVDZcbzdQ07MDFvJQgT8vZ7l2akAiItZ54AXPUhtaL7NQ/viewform?embedded=true" width="640" height="1004" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
+//   },
+//   {
+//     link: "/subjects/english",
+//     lesson: "English",
+//     assignment:
+//       '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdB-kH6VzTd7ZhvfzLpmVEjgBYa--jmNi66BlK1QLaLCQgrcg/viewform?embedded=true" width="640" height="677" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
+//   },
+//   {
+//     link: "/subjects/mathematics",
+//     lesson: "Mathematics",
+//     assignment: "",
+//   },
+//   {
+//     link: "/subjects/swahili",
+//     lesson: "Kiswahili",
+//     assignment: "",
+//   },
+//   {
+//     link: "/subjects/integrated_science",
+//     lesson: "Integrated science",
+//     assignment: "",
+//   },
 
-  {
-    link: "/subjects/business_studies",
-    lesson: "Business studies",
-    assignment:
-      '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckfLvA5oLguIwj52sHIgqSTylBjk4R0SjLP4i8ROdRUEWHrQ/viewform?embedded=true" width="640" height="634" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
-  },
-  {
-    link: "/subjects/agriculture",
-    lesson: "Agriculture",
-    assignment:
-      '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdXVTbpHAuqUbhasLO250P7DnI1vnUeOwRx3XdckWiy7dBncg/viewform?embedded=true" width="640" height="1074" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
-  },
-  {
-    link: "/subjects/technical_cocurricular",
-    lesson: "Pre Technical ",
-    assignment: "",
-  },
-  {
-    link: "/subjects/religious_education",
-    lesson: "Religious Education",
-    assignment:
-      '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQDmlcmRN0MXzlCyJKJi-QbGVG8Trp71rg_0FkobD98Oq0iA/viewform?embedded=true" width="640" height="704" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
-  },
-];
+//   {
+//     link: "/subjects/business_studies",
+//     lesson: "Business studies",
+//     assignment:
+//       '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckfLvA5oLguIwj52sHIgqSTylBjk4R0SjLP4i8ROdRUEWHrQ/viewform?embedded=true" width="640" height="634" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
+//   },
+//   {
+//     link: "/subjects/agriculture",
+//     lesson: "Agriculture",
+//     assignment:
+//       '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdXVTbpHAuqUbhasLO250P7DnI1vnUeOwRx3XdckWiy7dBncg/viewform?embedded=true" width="640" height="1074" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
+//   },
+//   {
+//     link: "/subjects/technical_cocurricular",
+//     lesson: "Pre Technical ",
+//     assignment: "",
+//   },
+//   {
+//     link: "/subjects/religious_education",
+//     lesson: "Religious Education",
+//     assignment:
+//       '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQDmlcmRN0MXzlCyJKJi-QbGVG8Trp71rg_0FkobD98Oq0iA/viewform?embedded=true" width="640" height="704" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>',
+//   },
+// ];
 
 export const lessons = [
   {
@@ -150,6 +150,365 @@ export const lessons = [
   },
 ];
 
+export const sub_jects=[
+  {
+    level:"PRE-PRIMARY",
+    iD:"1",
+    grades:[
+      {
+        grade:"Grade 1",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+      {
+        grade:"Grade 2",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+    ]
+  },
+  {
+    level:"PRIMARY",
+    iD:"2",
+    grades:[
+      {
+        grade:"Grade 1",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+      {
+        grade:"Grade 2",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+      {
+        grade:"Grade 3",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+      {
+        grade:"Grade 4",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+      {
+        grade:"Grade 5",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+      {
+        grade:"Grade 6",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+      
+    ]
+  },
+  {
+    level:"JUNIOR SECONDARY",
+    iD:"3",
+    grades:[
+      {
+        grade:"Grade 1",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+      {
+        grade:"Grade 2",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+      {
+        grade:"Grade 3",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+    ]
+  },
+  {
+    level:"SENIOR SECONDARY",
+    iD:"4",
+    grades:[
+      {
+        grade:"Grade 1",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+      {
+        grade:"Grade 2",
+        subjects:[
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Language and communication",
+            path:"#"
+          }
+        ]
+      },
+    ]
+  },
+]
+
+
+
+
+
+
+
 export const profileDetails = [
   {
     fieldName: "Name:",
@@ -166,5 +525,40 @@ export const profileDetails = [
   {
     fieldName: "Level of study",
     fieldValue: "Premary",
+  },
+];
+
+export const overviewCardsDescription = [
+  {
+    subjectName: "SOCIAL STUDIES",
+    path: "#",
+  },
+  {
+    subjectName: "ENGLISH",
+    path: "#",
+  },
+  {
+    subjectName: "MATHEMATICS",
+    path: "#",
+  },
+  {
+    subjectName: "KISWAHILI",
+    path: "#",
+  },
+  {
+    subjectName: "BUSINESS STUDIES",
+    path: "#",
+  },
+  {
+    subjectName: "AGRICULTURE",
+    path: "#",
+  },
+  {
+    subjectName: "PRE-TECHNICAL",
+    path: "#",
+  },
+  {
+    subjectName: "RELIGIOUS EDUCATION",
+    path: "#",
   },
 ];

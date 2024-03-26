@@ -68,7 +68,7 @@ const Home = () => {
       {/* custom-modal */}
       <div className={`custom-modal ${announcementModal ? 'active':''}`}>
         <div className="container">
-          <div className="modal-body">
+          <div className="modal-body-announcement ">
             <p className="close-button" onClick={displayModal} >&times;</p>
             <div className="title">NO ANNOUNCEMENTS</div>
             <p>

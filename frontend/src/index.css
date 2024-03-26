@@ -22,8 +22,29 @@ html {
 body {
   font-family: "Outfit", sans-serif;
 }
+/* width */
+::-webkit-scrollbar {
+  width:6px;
+  border-radius:10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 ul {
-  list-style: none;
+  list-style:none;
 }
 .font-large{
   font-size:var(--font-large);
@@ -241,19 +262,20 @@ img {
   display:flex;
   transform:translateY(30deg);
 }
-.modal-body {
+.modal-body-announcement {
   background: var(--color-white);
   max-width: 600px;
   margin: 0 auto;
   position: relative;
   color: var(--color-black);
   padding:2rem;
-
+  max-height:500px;
+  overflow-y:scroll;
 }
-.modal-body p {
+.modal-body-announcement p {
   font-size: 1.7rem;
 }
-.modal-body .close-button {
+.modal-body-announcement .close-button {
   color: var(--color-black);
   position: absolute;
   top: 0rem;
@@ -268,6 +290,66 @@ img {
   font-size: 3.4rem;
   color: var(--color-black);
 }
+.layouts-title{
+  font-size:3.4rem;
+}
+
+
+
+.view-button{
+  display:block;
+  width:150px;
+  height:4rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:var(--dark-blue);
+  color:var(--color-white);
+  font-size:1.7rem;
+  margin-top:1.5rem;
+  transition:All 0.5s;
+}
+.view-button:hover{
+  background:var(--color-error);
+}
+.subject-name{
+  font-size:1.8rem;
+}
+
+
+/* BUTTONS */
+.close-button{
+  position:absolute;
+  top:0;
+  width:50px;
+  height:50px;
+  background:#ff004f;
+  right:0;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  justify-content:center;
+  color:#fff;
+  font-size:5rem;
+  transition:all 0.5s;
+  cursor: pointer;
+}
+
+.close-button:hover{
+  background:var(--dark-blue);
+}
+
+.arrow-dropdown{
+  color:#Fff;
+}
+
+
+
+
+
+
+
 
 @media (max-width: 440px) {
   .home .grid {

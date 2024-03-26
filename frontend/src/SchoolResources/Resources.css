@@ -9,7 +9,7 @@
     flex-direction:column;
 }
 .subject_div{
-    width:80%;
+    width:100%;
     padding:1rem;
     background:#ccc;
     display:flex;
@@ -17,16 +17,56 @@
     justify-content: center;
     margin:0.3rem 0rem;
     cursor: pointer;
+    flex-direction: column;
 }
 .subject_div p{
     font-size:1.4rem;
-}
-.subject_div:hover p{
-    text-decoration: underline;
-    color:var(--dark-blue);
 }
 .title-first{
     font-size:2.3rem;
     color:var(--dark-blue);
     font-weight:600;
+}
+.lesson{
+    color:#000;
+}
+
+.grade-wrapper{
+    width:100%;
+}
+.subject_div .grade-level{
+    font-size:3em;
+    background:#444;
+    width:100%;
+    color:#FFF;
+    text-align:center;
+    cursor: pointer;
+    transition:all 0.5s;
+}
+.subject_div .grade-level:hover{
+    background:#000;
+}
+.subject_div .grade-level .arrow-dropdown{
+    color:red;
+    transform:rotateZ(45deg);
+}
+.grade-ul{
+    background:#f2f2f2;
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    min-width:350px;
+    display:none;
+}
+.grade-ul .active{
+    display:flex;
+}
+.grade-ul li{
+    width:100%;
+    margin:1.5rem 0rem;
+    font-size:2rem;
 }

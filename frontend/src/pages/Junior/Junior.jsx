@@ -6,7 +6,7 @@ const Junior = () => {
   return (
     <div>
       <Navbar />
-      <Subjects name="JUNIOR SECONDARY" />
+      <Subjects name="JUNIOR SECONDARY" id="3" />
       <Footer />
     </div>
   );

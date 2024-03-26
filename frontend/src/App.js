@@ -27,8 +27,10 @@ import UserProfile from './components/Profile/UserProfile'
 import Overview from './components/Dashboard/Overview'
 import Progress from './components/Dashboard/Progress'
 import Branch from './components/Branch/Branch'
+import PriPrimary from './pages/PrePrimary/PriPrimary'
 
 import { useState, useEffect } from 'react'
+
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const isAuthenticated = !!localStorage.getItem('email')
@@ -80,7 +82,7 @@ const App = () => {
           <PrivateRoute path='/junior' component={Junior} />
           <PrivateRoute path='/subjects/mathematics' component={Mathematics} />
           <PrivateRoute path='/subjects/english' component={English} />
-          <PrivateRoute path='/subjects/swahili' component={Swahili} />
+          <PrivateRoute path='/pre-primary' component={PriPrimary} />
           <PrivateRoute
             path='/subjects/integrated_science'
             component={IntegratedScience}

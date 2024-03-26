@@ -7,7 +7,7 @@ const Business = () => {
       <Navbar />
       <section className="container lesson_study">
         <p className="lession" style={{ textAlign:'center',fontSize:'3rem' }} >BUSINESS</p>
-        <Lesson/>
+      
       </section>
       <Footer />
     </div>

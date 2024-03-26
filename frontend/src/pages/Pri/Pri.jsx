@@ -7,7 +7,7 @@ const Pri = () => {
   return (
     <div>
       <Navbar />
-      <Subjects name="PRIMARY SCHOOL" />
+      <Subjects name="PRIMARY SCHOOL" id="2" />
       <Footer />
     </div>
   );
