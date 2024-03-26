@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./navbar.css";
-import { Link,useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 const Navbar = () => {
-
-  const history = useHistory()
+  const history = useHistory();
 
   const isAuthenticated = !!localStorage.getItem("email");
   const [showMenu, setShowMenu] = useState(false);
@@ -16,7 +15,7 @@ const Navbar = () => {
   };
   const handleLogout = () => {
     localStorage.clear();
-    history.push('/');
+    history.push("/");
   };
   return (
     <div>
@@ -37,7 +36,7 @@ const Navbar = () => {
                 className={`ulList ${activeNavItem === 0 && "active"}`}
                 onClick={() => handleNavItemClick(0)}
               >
-                <Link to="/home">HOME</Link>
+                <Link to="/home" style={{fontSize:'1.7rem'}}>HOME</Link>
               </li>
 
               {isAuthenticated ? (
@@ -46,7 +45,11 @@ const Navbar = () => {
                     className={`ulList ${activeNavItem === 1 && "active"}`}
                     onClick={() => handleNavItemClick(1)}
                   >
-                    <Link to="/pre-primary" className="school_link">
+                    <Link
+                      to="/pre-primary"
+                      className="school_link"
+                      style={{ fontSize: "1.7rem" }}
+                    >
                       PRE PRIMARY
                     </Link>
                   </li>
@@ -54,7 +57,11 @@ const Navbar = () => {
                     className={`ulList ${activeNavItem === 2 && "active"}`}
                     onClick={() => handleNavItemClick(2)}
                   >
-                    <Link to="/primary" className="school_link">
+                    <Link
+                      to="/primary"
+                      className="school_link"
+                      style={{ fontSize: "1.7rem" }}
+                    >
                       PRIMARY
                     </Link>
                   </li>
@@ -63,7 +70,11 @@ const Navbar = () => {
                     className={`ulList ${activeNavItem === 3 && "active"}`}
                     onClick={() => handleNavItemClick(3)}
                   >
-                    <Link to="/junior" className="school_link">
+                    <Link
+                      to="/junior"
+                      className="school_link"
+                      style={{ fontSize: "1.7rem" }}
+                    >
                       JUNIOR SECONDARY
                     </Link>
                   </li>
@@ -71,7 +82,11 @@ const Navbar = () => {
                     className={`ulList ${activeNavItem === 4 && "active"}`}
                     onClick={() => handleNavItemClick(4)}
                   >
-                    <Link to="/senior" className="school_link">
+                    <Link
+                      to="/senior"
+                      className="school_link"
+                      style={{ fontSize: "1.7rem" }}
+                    >
                       SENIOR SECONDARY
                     </Link>
                   </li>
@@ -79,7 +94,12 @@ const Navbar = () => {
                     className={`ulList ${activeNavItem === 5 && "active"}`}
                     onClick={() => handleNavItemClick(5)}
                   >
-                    <Link to="#" className="school_link" onClick={handleLogout}>
+                    <Link
+                      to="#"
+                      className="school_link"
+                      onClick={handleLogout}
+                      style={{ fontSize: "1.7rem" }}
+                    >
                       LOGOUT
                     </Link>
                   </li>

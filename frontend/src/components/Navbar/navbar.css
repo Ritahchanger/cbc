@@ -21,13 +21,13 @@
     position:relative;
     border-bottom:2px solid #fff;
 }
+.ulList a{
+    font-size:1.7rem;
+}
 .ulList.active{
     border-bottom:2px solid var(--dark-blue);
 }
 
-.ulList a{
-    font-size:1.4rem;
-}
 .logos{
     margin-left:2.3rem;
     display:inline-flex;
@@ -55,8 +55,9 @@ color:var( --color-error);
     top:0;
 }
 
-
-
+.nav li a{
+    font-size:2rem;
+}
 
 
 

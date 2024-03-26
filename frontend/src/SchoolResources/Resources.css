@@ -44,7 +44,7 @@
     cursor: pointer;
     transition:all 0.5s;
     padding:1rem 0rem;;
-    margin:1rem 0rem;
+    margin:3rem 0rem;
 }
 .subject_div .grade-level:hover{
     background:#000;
@@ -81,6 +81,7 @@
     padding:2rem;
     font-size:2rem;
     transition:all 0.5s;
+
 }
 .grade-ul li:hover{
     background:#000;

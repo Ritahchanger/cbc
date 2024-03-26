@@ -6,7 +6,6 @@ const Messages = () => {
   return (
     <div className='announcements'>
         <Navbar/>
-        <Footer/>
     </div>
   )
 }
