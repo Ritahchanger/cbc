@@ -7,17 +7,10 @@ import { sub_jects } from "../components/Datasheet";
 const Subjects = ({ name, id }) => {
   const [studentSubject, setStudentSubject] = useState({});
 
-  const handleSubjectsDisplay = (gradeIndex) => {
+  const handleSubjectsDisplay = (courseIndex) => {
     setStudentSubject((prevState) => ({
       ...prevState,
-      [gradeIndex]: true
-    }));
-  };
-
-  const handleMouseLeave = (gradeIndex) => {
-    setStudentSubject((prevState) => ({
-      ...prevState,
-      [gradeIndex]: false
+      [courseIndex]: !prevState[courseIndex]
     }));
   };
 
@@ -34,8 +27,7 @@ const Subjects = ({ name, id }) => {
                   <div key={courseIndex} className="subject-container">
                     <p
                       className="grade-level"
-                      onMouseEnter={() => handleSubjectsDisplay(courseIndex)}
-                      onMouseLeave={() => handleMouseLeave(courseIndex)}
+                      onClick={() => handleSubjectsDisplay(courseIndex)}
                     >
                       {course.grade}{" "}
                       <span className="arrow-dropdown">

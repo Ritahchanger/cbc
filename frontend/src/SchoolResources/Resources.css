@@ -64,9 +64,10 @@
     min-width:350px;
     transition:All 0.5s;
     position:absolute;
-    background:#fff000;
+    background:#20d435;
     top:80%;
     z-index:9;
+    margin-bottom:3rem;
 }
 .subject-container{
     position: relative;
