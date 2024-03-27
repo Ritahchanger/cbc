@@ -70,9 +70,8 @@
     max-width:600px;
     width:100%;
     margin:0 auto;
-    margin-top:-2rem;
     padding:2rem;
-    background:#565656;
+    background:#fff;
 }
 .modal input[type=submit]{
     background:var(--dark-blue)
@@ -81,7 +80,7 @@
     background:#fff;
 }
 .modal .form_lable{
-    color:#ababab;
+    color:#000;
 }
 .close_modal{
     text-align:center;
@@ -91,6 +90,39 @@
     margin-top:0;
     cursor:pointer;
 }
+
+.upload-image{
+    display:flex;
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+}
+
+.upload-image img{
+    width:70px;
+    cursor:pointer;
+}
+
+
+.uploaded-success{
+    font-size:1.9rem;
+    color:green;
+
+}
+.input_group{
+    position:relative;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media(max-width:500px){
     .sub__title{

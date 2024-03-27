@@ -8,7 +8,9 @@ const Subjects = ({ name, id }) => {
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
 
   const handleSubjectsDisplay = (courseIndex) => {
-    setOpenDropdownIndex((prevIndex) => (prevIndex === courseIndex ? null : courseIndex));
+    setOpenDropdownIndex((prevIndex) =>
+      prevIndex === courseIndex ? null : courseIndex
+    );
   };
 
   return (
@@ -31,7 +33,11 @@ const Subjects = ({ name, id }) => {
                         <i className="fa-solid fa-caret-down"></i>
                       </span>{" "}
                     </p>
-                    <ul className={`grade-ul ${openDropdownIndex === courseIndex ? 'active' : ''}`}>
+                    <ul
+                      className={`grade-ul ${
+                        openDropdownIndex === courseIndex ? "active" : ""
+                      }`}
+                    >
                       {course.subjects.map((lesson, lessonIndex) => (
                         <li key={lessonIndex}>{lesson.lession_subjecs}</li>
                       ))}

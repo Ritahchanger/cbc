@@ -159,23 +159,27 @@ export const sub_jects=[
         grade:"Grade 1",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Mathematics",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Agriculture",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Science and technological studies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"English",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Natural environment",
+            path:"#"
+          },
+          {
+            lession_subjecs:"Creative arts",
             path:"#"
           }
         ]
@@ -184,23 +188,23 @@ export const sub_jects=[
         grade:"Grade 2",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Natural environment",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Social studies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Engish",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Creative arts",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Mathematical activities",
             path:"#"
           }
         ]
@@ -215,23 +219,23 @@ export const sub_jects=[
         grade:"Grade 1",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Natural environment",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Religious Education",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"English",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Language activies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Science and Technologies",
             path:"#"
           }
         ]
@@ -240,23 +244,23 @@ export const sub_jects=[
         grade:"Grade 2",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Natural environment",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Religious Education",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"English",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Language activies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Science and Technologies",
             path:"#"
           }
         ]
@@ -265,23 +269,23 @@ export const sub_jects=[
         grade:"Grade 3",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Natural environment",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Religious Education",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"English",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Language activies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Science and Technologies",
             path:"#"
           }
         ]
@@ -290,23 +294,23 @@ export const sub_jects=[
         grade:"Grade 4",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Natural environment",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Religious Education",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"English",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Language activies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Science and Technologies",
             path:"#"
           }
         ]
@@ -315,23 +319,23 @@ export const sub_jects=[
         grade:"Grade 5",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Natural environment",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Religious Education",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"English",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Language activies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Science and Technologies",
             path:"#"
           }
         ]
@@ -340,23 +344,23 @@ export const sub_jects=[
         grade:"Grade 6",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Natural environment",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Religious Education",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"English",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Language activies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Science and Technologies",
             path:"#"
           }
         ]
@@ -372,23 +376,23 @@ export const sub_jects=[
         grade:"Grade 1",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Mathematics",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Agriculture",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Performing Arts",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Business studies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Integrated science",
             path:"#"
           }
         ]
@@ -397,23 +401,23 @@ export const sub_jects=[
         grade:"Grade 2",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Mathematics",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Agriculture",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Performing Arts",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Business studies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Integrated science",
             path:"#"
           }
         ]
@@ -422,23 +426,23 @@ export const sub_jects=[
         grade:"Grade 3",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Mathematics",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Agriculture",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Performing Arts",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Business studies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Integrated science",
             path:"#"
           }
         ]
@@ -453,23 +457,23 @@ export const sub_jects=[
         grade:"Grade 1",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Agriculture",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Visual Arts",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Business studies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Mathematics",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Language",
             path:"#"
           }
         ]
@@ -478,23 +482,23 @@ export const sub_jects=[
         grade:"Grade 2",
         subjects:[
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Agriculture",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Visual Arts",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Business studies",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Mathematics",
             path:"#"
           },
           {
-            lession_subjecs:"Language and communication",
+            lession_subjecs:"Language",
             path:"#"
           }
         ]
